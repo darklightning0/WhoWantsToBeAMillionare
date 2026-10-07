@@ -1,5 +1,7 @@
 package com.example.ui.components;
 
+import com.example.ui.UITheme;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -18,7 +20,8 @@ public final class GameShowButton extends JButton {
         setBorderPainted(false);
         setContentAreaFilled(false);
         setOpaque(false);
-        setBorder(BorderFactory.createEmptyBorder(10, 30, 10, 30));
+        setHorizontalAlignment(SwingConstants.LEFT);
+        setBorder(BorderFactory.createEmptyBorder(10, 36, 10, 36));
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -36,12 +39,19 @@ public final class GameShowButton extends JButton {
         });
     }
 
+    public static String formatWithShape(String text) {
+        String goldHex = String.format("#%02x%02x%02x", UITheme.GOLD.getRed(), UITheme.GOLD.getGreen(), UITheme.GOLD.getBlue());
+        return "<html><font color='" + goldHex + "'>◆</font>&nbsp;&nbsp;" + text + "</html>";
+    }
+
     @Override
     protected void paintComponent(Graphics graphics) {
-        int point = Math.min(24, getHeight() / 2);
+        int w = getWidth() - 1;
+        int h = getHeight() - 1;
+        int point = Math.min(24, h / 2);
         Polygon shape = new Polygon(
-            new int[]{0, point, getWidth() - point, getWidth(), getWidth() - point, point},
-            new int[]{getHeight() / 2, 0, 0, getHeight() / 2, getHeight(), getHeight()},
+            new int[]{0, point, w - point, w, w - point, point},
+            new int[]{h / 2, 0, 0, h / 2, h, h},
             6
         );
 
@@ -49,7 +59,7 @@ public final class GameShowButton extends JButton {
         copy.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         copy.setColor(hovered ? hoverFill : fill);
         copy.fillPolygon(shape);
-        copy.setColor(new Color(190, 199, 216));
+        copy.setColor(UITheme.GOLD);
         copy.setStroke(new BasicStroke(2f));
         copy.drawPolygon(shape);
         copy.dispose();

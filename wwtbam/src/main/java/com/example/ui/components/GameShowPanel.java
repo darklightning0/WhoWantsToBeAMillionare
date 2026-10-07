@@ -1,5 +1,7 @@
 package com.example.ui.components;
 
+import com.example.ui.UITheme;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,10 +13,12 @@ public final class GameShowPanel extends JPanel {
 
     @Override
     protected void paintComponent(Graphics graphics) {
-        int point = Math.min(34, getHeight() / 2);
+        int w = getWidth() - 1;
+        int h = getHeight() - 1;
+        int point = Math.min(34, h / 2);
         Polygon shape = new Polygon(
-            new int[]{0, point, getWidth() - point, getWidth(), getWidth() - point, point},
-            new int[]{getHeight() / 2, 0, 0, getHeight() / 2, getHeight(), getHeight()},
+            new int[]{0, point, w - point, w, w - point, point},
+            new int[]{h / 2, 0, 0, h / 2, h, h},
             6
         );
 
@@ -22,7 +26,7 @@ public final class GameShowPanel extends JPanel {
         copy.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         copy.setColor(getBackground());
         copy.fillPolygon(shape);
-        copy.setColor(new Color(205, 194, 137));
+        copy.setColor(UITheme.GOLD);
         copy.setStroke(new BasicStroke(2.5f));
         copy.drawPolygon(shape);
         copy.dispose();

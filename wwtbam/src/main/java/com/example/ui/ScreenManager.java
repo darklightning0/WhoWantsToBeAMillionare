@@ -8,6 +8,8 @@ public final class ScreenManager extends JPanel {
     public static final String QUESTION = "question";
     public static final String BETWEEN = "between";
     public static final String END = "end";
+    public static final String TRUE_FALSE = "true_false";
+    public static final String OPEN_INPUT = "open_input";
 
     private final CardLayout layout = new CardLayout();
 

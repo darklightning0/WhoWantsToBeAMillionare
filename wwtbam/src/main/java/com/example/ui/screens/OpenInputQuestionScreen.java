@@ -1,0 +1,131 @@
+package com.example.ui.screens;
+
+import com.example.ui.UITheme;
+import com.example.ui.JokerState;
+import com.example.ui.components.BackgroundPanel;
+import com.example.ui.components.CircularTimer;
+import com.example.ui.components.GameShowButton;
+import com.example.ui.components.GameShowPanel;
+import com.example.ui.components.JokerPanel;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.HierarchyEvent;
+
+public final class OpenInputQuestionScreen extends JPanel {
+    private static final int QUESTION_TIME_SECONDS = 30;
+
+    private final CircularTimer timerCircle = new CircularTimer(QUESTION_TIME_SECONDS);
+    private final Timer timer;
+    private final JTextField inputField = new JTextField();
+    private int secondsRemaining = QUESTION_TIME_SECONDS;
+
+    public OpenInputQuestionScreen(Runnable onAnswerSelected, JokerState jokerState) {
+        setLayout(new BorderLayout());
+        setOpaque(false);
+
+        BackgroundPanel background = new BackgroundPanel();
+        background.setLayout(new BorderLayout(0, 14));
+        background.setBorder(BorderFactory.createEmptyBorder(22, 28, 28, 28));
+        add(background, BorderLayout.CENTER);
+
+        JPanel topBar = new JPanel(new BorderLayout(0, 5));
+        topBar.setOpaque(false);
+        int currentQuestionNumber = 3;
+        JLabel questionMoney = new JLabel(InBetweenScreen.PRIZES[currentQuestionNumber - 1]);
+        questionMoney.setForeground(UITheme.GOLD);
+        questionMoney.setFont(new Font("SansSerif", Font.BOLD, 18));
+        topBar.add(questionMoney, BorderLayout.WEST);
+
+        JPanel timerSide = new JPanel(new BorderLayout(8, 0));
+        timerSide.setOpaque(false);
+        timerSide.add(new JokerPanel(jokerState), BorderLayout.WEST);
+        timerSide.add(timerCircle, BorderLayout.EAST);
+        topBar.add(timerSide, BorderLayout.EAST);
+        background.add(topBar, BorderLayout.NORTH);
+
+        GameShowPanel questionCard = new GameShowPanel(UITheme.PANEL);
+        questionCard.setLayout(new GridBagLayout());
+        questionCard.setBorder(BorderFactory.createEmptyBorder(18, 55, 18, 55));
+        questionCard.setPreferredSize(new Dimension(0, 106));
+        questionCard.setMinimumSize(new Dimension(0, 106));
+        questionCard.setMaximumSize(new Dimension(Integer.MAX_VALUE, 106));
+
+        JLabel question = new JLabel(
+            "<html><div style='text-align:center'>What is the capital city<br>of Australia?</div></html>",
+            SwingConstants.CENTER
+        );
+        question.setForeground(UITheme.TEXT);
+        question.setFont(new Font("SansSerif", Font.BOLD, 22));
+        questionCard.add(question);
+
+        JPanel inputPanel = new JPanel(new BorderLayout(12, 0));
+        inputPanel.setOpaque(false);
+        inputPanel.setPreferredSize(new Dimension(0, 62));
+        inputPanel.setMinimumSize(new Dimension(0, 62));
+        inputPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 62));
+
+        inputField.setBackground(UITheme.PANEL);
+        inputField.setForeground(Color.WHITE);
+        inputField.setCaretColor(UITheme.GOLD);
+        inputField.setFont(new Font("SansSerif", Font.BOLD, 18));
+        inputField.setBorder(BorderFactory.createCompoundBorder(
+            BorderFactory.createLineBorder(UITheme.GOLD, 2),
+            BorderFactory.createEmptyBorder(10, 20, 10, 20)
+        ));
+        inputField.addActionListener(event -> answerSelected(onAnswerSelected));
+
+        GameShowButton submitButton = new GameShowButton(
+            GameShowButton.formatWithShape("Submit"),
+            UITheme.PANEL,
+            UITheme.PANEL_LIGHT
+        );
+        submitButton.setPreferredSize(new Dimension(200, 62));
+        submitButton.setMinimumSize(new Dimension(200, 62));
+        submitButton.setMaximumSize(new Dimension(200, 62));
+        submitButton.addActionListener(event -> answerSelected(onAnswerSelected));
+
+        inputPanel.add(inputField, BorderLayout.CENTER);
+        inputPanel.add(submitButton, BorderLayout.EAST);
+
+        JPanel questionAndAnswers = new JPanel(new BorderLayout(0, 10));
+        questionAndAnswers.setOpaque(false);
+        questionAndAnswers.add(questionCard, BorderLayout.NORTH);
+        questionAndAnswers.add(inputPanel, BorderLayout.SOUTH);
+        background.add(questionAndAnswers, BorderLayout.SOUTH);
+
+        timer = new Timer(1000, event -> tick(onAnswerSelected));
+        timer.setInitialDelay(1000);
+        addHierarchyListener(event -> {
+            if ((event.getChangeFlags() & HierarchyEvent.SHOWING_CHANGED) != 0 && isShowing()) {
+                startTimer();
+                inputField.setText("");
+                SwingUtilities.invokeLater(inputField::requestFocusInWindow);
+            }
+        });
+    }
+
+    private void tick(Runnable onAnswerSelected) {
+        secondsRemaining--;
+        timerCircle.setSecondsRemaining(secondsRemaining);
+
+        if (secondsRemaining <= 0) {
+            answerSelected(onAnswerSelected);
+        }
+    }
+
+    private void answerSelected(Runnable onAnswerSelected) {
+        timer.stop();
+        onAnswerSelected.run();
+    }
+
+    private void startTimer() {
+        secondsRemaining = QUESTION_TIME_SECONDS;
+        timerCircle.setSecondsRemaining(secondsRemaining);
+        timer.start();
+    }
+
+    public String getInputAnswer() {
+        return inputField.getText().trim();
+    }
+}

@@ -25,6 +25,7 @@ public final class EndScreen extends JPanel {
         JLabel score = UITheme.title((String) Integer.toString(currentScore));
         score.setForeground(UITheme.GOLD);
         StyledButton playAgainButton = UITheme.primaryButton("Play Again");
+        playAgainButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         playAgainButton.addActionListener(event -> onPlayAgain.run());
 
         content.add(heading);
