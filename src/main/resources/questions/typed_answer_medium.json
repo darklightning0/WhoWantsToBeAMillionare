@@ -1,0 +1,483 @@
+[
+  {
+    "id": "ta-052",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Animals",
+    "question": "Cashmere is wool from which animal?",
+    "acceptedAnswers": [
+      "Goat",
+      "Goats",
+      "Cashmere goat"
+    ]
+  },
+  {
+    "id": "ta-053",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Animals",
+    "question": "Which dog breed is named after a region of Croatia?",
+    "acceptedAnswers": [
+      "Dalmatian",
+      "Dalmatians"
+    ]
+  },
+  {
+    "id": "ta-054",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "What is the name of the famous green-hill photo used as the default Windows XP wallpaper?",
+    "acceptedAnswers": [
+      "Bliss"
+    ]
+  },
+  {
+    "id": "ta-055",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "Which American computer scientist created the C programming language?",
+    "acceptedAnswers": [
+      "Dennis Ritchie",
+      "Ritchie"
+    ]
+  },
+  {
+    "id": "ta-056",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "The \"S\" in the RSA encryption algorithm stands for the surname of which cryptographer?",
+    "acceptedAnswers": [
+      "Shamir",
+      "Adi Shamir"
+    ]
+  },
+  {
+    "id": "ta-057",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "What did the name of the anonymity network Tor originally stand for?",
+    "acceptedAnswers": [
+      "The Onion Router",
+      "Onion Router"
+    ]
+  },
+  {
+    "id": "ta-058",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "Which internet company started life as an online bookstore called \"Cadabra\"?",
+    "acceptedAnswers": [
+      "Amazon"
+    ]
+  },
+  {
+    "id": "ta-059",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "What is the metal part between a CPU and its fan, used to draw away heat, called?",
+    "acceptedAnswers": [
+      "Heat sink",
+      "Heatsink"
+    ]
+  },
+  {
+    "id": "ta-060",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Film",
+    "question": "Who directed the film \"Pan's Labyrinth\"?",
+    "acceptedAnswers": [
+      "Guillermo del Toro",
+      "del Toro"
+    ]
+  },
+  {
+    "id": "ta-061",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Film",
+    "question": "What is Dorothy's surname in \"The Wizard of Oz\"?",
+    "acceptedAnswers": [
+      "Gale"
+    ]
+  },
+  {
+    "id": "ta-062",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Film",
+    "question": "Who is the young warrior hero of the story within \"The NeverEnding Story\" (1984)?",
+    "acceptedAnswers": [
+      "Atreyu"
+    ]
+  },
+  {
+    "id": "ta-063",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "What is the highest number of Michelin stars a restaurant can receive?",
+    "acceptedAnswers": [
+      "3",
+      "three"
+    ]
+  },
+  {
+    "id": "ta-064",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "The Fields Medal in mathematics is awarded every how many years?",
+    "acceptedAnswers": [
+      "4",
+      "four"
+    ]
+  },
+  {
+    "id": "ta-065",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "Which Latin phrase means \"seize the day\"?",
+    "acceptedAnswers": [
+      "Carpe diem"
+    ]
+  },
+  {
+    "id": "ta-066",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "Which river flows through the Scottish city of Glasgow?",
+    "acceptedAnswers": [
+      "Clyde",
+      "River Clyde",
+      "The Clyde"
+    ]
+  },
+  {
+    "id": "ta-067",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "In which year did Facebook launch?",
+    "acceptedAnswers": [
+      "2004"
+    ]
+  },
+  {
+    "id": "ta-068",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "What is the longest river in Europe?",
+    "acceptedAnswers": [
+      "Volga",
+      "Volga River",
+      "River Volga"
+    ]
+  },
+  {
+    "id": "ta-069",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "What is the capital city of the US state of Texas?",
+    "acceptedAnswers": [
+      "Austin"
+    ]
+  },
+  {
+    "id": "ta-070",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "What is the capital of Brazil?",
+    "acceptedAnswers": [
+      "Brasilia",
+      "Brasília"
+    ]
+  },
+  {
+    "id": "ta-071",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "What is the smallest US state by area?",
+    "acceptedAnswers": [
+      "Rhode Island"
+    ]
+  },
+  {
+    "id": "ta-072",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "Which is the only country whose national flag is not a rectangle?",
+    "acceptedAnswers": [
+      "Nepal"
+    ]
+  },
+  {
+    "id": "ta-073",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "What was the former name of Ho Chi Minh City?",
+    "acceptedAnswers": [
+      "Saigon"
+    ]
+  },
+  {
+    "id": "ta-074",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "What is the name of Canada's national anthem?",
+    "acceptedAnswers": [
+      "O Canada"
+    ]
+  },
+  {
+    "id": "ta-075",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "Which famous waterfall is served by the \"Maid of the Mist\" boat tours?",
+    "acceptedAnswers": [
+      "Niagara Falls",
+      "Niagara"
+    ]
+  },
+  {
+    "id": "ta-076",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "Which mission was the last one in NASA's Apollo program?",
+    "acceptedAnswers": [
+      "Apollo 17",
+      "17"
+    ]
+  },
+  {
+    "id": "ta-077",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "The assassination of which archduke triggered the start of World War I?",
+    "acceptedAnswers": [
+      "Franz Ferdinand",
+      "Archduke Franz Ferdinand",
+      "Franz Ferdinand of Austria"
+    ]
+  },
+  {
+    "id": "ta-078",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "Which German field marshal was known as the \"Desert Fox\"?",
+    "acceptedAnswers": [
+      "Erwin Rommel",
+      "Rommel"
+    ]
+  },
+  {
+    "id": "ta-079",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "On which island was Napoleon Bonaparte born?",
+    "acceptedAnswers": [
+      "Corsica"
+    ]
+  },
+  {
+    "id": "ta-080",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "In which year did the French Revolution begin?",
+    "acceptedAnswers": [
+      "1789"
+    ]
+  },
+  {
+    "id": "ta-081",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Mathematics",
+    "question": "Which Roman numeral stands for 500?",
+    "acceptedAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": "ta-082",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Mathematics",
+    "question": "Who proved Fermat's Last Theorem?",
+    "acceptedAnswers": [
+      "Andrew Wiles",
+      "Wiles"
+    ]
+  },
+  {
+    "id": "ta-083",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Mathematics",
+    "question": "Which Greek mathematician is said to have shouted \"Eureka!\" after discovering the principle of displacement?",
+    "acceptedAnswers": [
+      "Archimedes"
+    ]
+  },
+  {
+    "id": "ta-084",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Mathematics",
+    "question": "At what temperature are degrees Celsius and degrees Fahrenheit equal?",
+    "acceptedAnswers": [
+      "-40",
+      "−40",
+      "minus 40",
+      "-40°"
+    ]
+  },
+  {
+    "id": "ta-085",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Music",
+    "question": "Who is the lead singer of the rock band Guns N' Roses?",
+    "acceptedAnswers": [
+      "Axl Rose",
+      "Axl"
+    ]
+  },
+  {
+    "id": "ta-086",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Mythology",
+    "question": "What is the name of the wild man who becomes Gilgamesh's friend and companion?",
+    "acceptedAnswers": [
+      "Enkidu"
+    ]
+  },
+  {
+    "id": "ta-087",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Mythology",
+    "question": "Who is the Greek god of wine?",
+    "acceptedAnswers": [
+      "Dionysus",
+      "Dionysos"
+    ]
+  },
+  {
+    "id": "ta-088",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "How many baby (milk) teeth does a human child have in total?",
+    "acceptedAnswers": [
+      "20",
+      "twenty"
+    ]
+  },
+  {
+    "id": "ta-089",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "What do you study if you are studying entomology?",
+    "acceptedAnswers": [
+      "Insects",
+      "Insect",
+      "Bugs"
+    ]
+  },
+  {
+    "id": "ta-090",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "Which part of the brain takes its name from the Greek word for \"seahorse\"?",
+    "acceptedAnswers": [
+      "Hippocampus"
+    ]
+  },
+  {
+    "id": "ta-091",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "Coulrophobia is the fear of what?",
+    "acceptedAnswers": [
+      "Clowns",
+      "Clown"
+    ]
+  },
+  {
+    "id": "ta-092",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "What is the scientific name for the kneecap?",
+    "acceptedAnswers": [
+      "Patella"
+    ]
+  },
+  {
+    "id": "ta-093",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "What is the chemical formula of ozone?",
+    "acceptedAnswers": [
+      "O3"
+    ]
+  },
+  {
+    "id": "ta-094",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Sports",
+    "question": "Which ice hockey player holds the NHL record of 2,857 career points?",
+    "acceptedAnswers": [
+      "Wayne Gretzky",
+      "Gretzky"
+    ]
+  },
+  {
+    "id": "ta-095",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Sports",
+    "question": "Which country hosted the 2006 FIFA World Cup?",
+    "acceptedAnswers": [
+      "Germany"
+    ]
+  },
+  {
+    "id": "ta-096",
+    "type": "TYPED_ANSWER",
+    "difficulty": "MEDIUM",
+    "category": "Sports",
+    "question": "On which Portuguese island was Cristiano Ronaldo born?",
+    "acceptedAnswers": [
+      "Madeira"
+    ]
+  }
+]

@@ -1,0 +1,1575 @@
+[
+  {
+    "id": "mc-266",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Animals",
+    "question": "How many living species of hyena are there?",
+    "correctAnswer": "4",
+    "incorrectAnswers": [
+      "8",
+      "2",
+      "6"
+    ]
+  },
+  {
+    "id": "mc-267",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Animals",
+    "question": "To which phylum do all mammals, birds and reptiles belong?",
+    "correctAnswer": "Chordata",
+    "incorrectAnswers": [
+      "Echinodermata",
+      "Annelida",
+      "Arthropoda"
+    ]
+  },
+  {
+    "id": "mc-268",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Animals",
+    "question": "Which of these animals is NOT a lizard?",
+    "correctAnswer": "Tuatara",
+    "incorrectAnswers": [
+      "Komodo dragon",
+      "Gila monster",
+      "Green iguana"
+    ]
+  },
+  {
+    "id": "mc-269",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Animals",
+    "question": "What is the collective noun for a group of vultures (feeding)?",
+    "correctAnswer": "Wake",
+    "incorrectAnswers": [
+      "Ambush",
+      "Building",
+      "Gaze"
+    ]
+  },
+  {
+    "id": "mc-270",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Animals",
+    "question": "Which bird is born with claws on its wings?",
+    "correctAnswer": "Hoatzin",
+    "incorrectAnswers": [
+      "Cormorant",
+      "Cassowary",
+      "Secretary bird"
+    ]
+  },
+  {
+    "id": "mc-271",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Animals",
+    "question": "What is the scientific name of the budgerigar?",
+    "correctAnswer": "Melopsittacus undulatus",
+    "incorrectAnswers": [
+      "Nymphicus hollandicus",
+      "Pyrrhura molinae",
+      "Ara macao"
+    ]
+  },
+  {
+    "id": "mc-272",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Animals",
+    "question": "Which copper-based protein gives the Antarctic octopus its blue blood?",
+    "correctAnswer": "Haemocyanin",
+    "incorrectAnswers": [
+      "Cytochrome",
+      "Haemoglobin",
+      "Myoglobin"
+    ]
+  },
+  {
+    "id": "mc-273",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Animals",
+    "question": "Chronic wasting disease only infects members of which animal family?",
+    "correctAnswer": "Cervids (deer)",
+    "incorrectAnswers": [
+      "Hominids",
+      "Felids (cats)",
+      "Canids (dogs)"
+    ]
+  },
+  {
+    "id": "mc-274",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "In the IEC binary prefixes, what is 1024 bytes called?",
+    "correctAnswer": "Kibibyte",
+    "incorrectAnswers": [
+      "Kylobyte",
+      "Kilobyte",
+      "Kelobyte"
+    ]
+  },
+  {
+    "id": "mc-275",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "According to De Morgan's laws, the Boolean expression NOT(A AND B) is equivalent to:",
+    "correctAnswer": "(NOT A) OR (NOT B)",
+    "incorrectAnswers": [
+      "(NOT A) AND (NOT B)",
+      "A OR (NOT B)",
+      "(NOT A) AND B"
+    ]
+  },
+  {
+    "id": "mc-276",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "How many bits are stored for the significand (mantissa) of a single-precision floating-point number?",
+    "correctAnswer": "23",
+    "incorrectAnswers": [
+      "8",
+      "53",
+      "15"
+    ]
+  },
+  {
+    "id": "mc-277",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "What is the maximum value of a 32-bit signed integer?",
+    "correctAnswer": "2,147,483,647",
+    "incorrectAnswers": [
+      "255",
+      "2,048",
+      "9,223,372,036,854,775,807"
+    ]
+  },
+  {
+    "id": "mc-278",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "Which of these people co-founded Palantir?",
+    "correctAnswer": "Peter Thiel",
+    "incorrectAnswers": [
+      "Mark Zuckerberg",
+      "Marc Benioff",
+      "Jack Dorsey"
+    ]
+  },
+  {
+    "id": "mc-279",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "At what refresh rate in Hz does the PAL video standard run?",
+    "correctAnswer": "50",
+    "incorrectAnswers": [
+      "59",
+      "60",
+      "25"
+    ]
+  },
+  {
+    "id": "mc-280",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "What was the name of the first Bulgarian personal computer?",
+    "correctAnswer": "IMKO-1",
+    "incorrectAnswers": [
+      "Pravetz 82",
+      "Pravetz 8D",
+      "IZOT 1030"
+    ]
+  },
+  {
+    "id": "mc-281",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "The Dutch computer scientist Mark Overmars created which game development tool?",
+    "correctAnswer": "GameMaker",
+    "incorrectAnswers": [
+      "Stencyl",
+      "Construct",
+      "Torque 2D"
+    ]
+  },
+  {
+    "id": "mc-282",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "What was the name of the security vulnerability found in Bash in 2014?",
+    "correctAnswer": "Shellshock",
+    "incorrectAnswers": [
+      "Spectre",
+      "Bashbug",
+      "Stagefright"
+    ]
+  },
+  {
+    "id": "mc-283",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "In networking, what does the acronym RIP stand for?",
+    "correctAnswer": "Routing Information Protocol",
+    "incorrectAnswers": [
+      "Runtime Instance Processes",
+      "Regular Interval Processes",
+      "Routine Inspection Protocol"
+    ]
+  },
+  {
+    "id": "mc-284",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "What does CMOS stand for?",
+    "correctAnswer": "Complementary metal–oxide–semiconductor",
+    "incorrectAnswers": [
+      "Complementary magnetic-ohms-semiconductor",
+      "Computer-made operating system",
+      "Computer-made oscillating static"
+    ]
+  },
+  {
+    "id": "mc-285",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Film",
+    "question": "In \"Big Hero 6\", Baymax's movements were modelled on which animals?",
+    "correctAnswer": "Baby penguins",
+    "incorrectAnswers": [
+      "Baby monkeys",
+      "Baby ostriches",
+      "Baby bears"
+    ]
+  },
+  {
+    "id": "mc-286",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Film",
+    "question": "What is the name of the Predator's species in the 1987 film \"Predator\"?",
+    "correctAnswer": "Yautja",
+    "incorrectAnswers": [
+      "Xenomorph",
+      "Praetorian",
+      "Phocrex"
+    ]
+  },
+  {
+    "id": "mc-287",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "General Knowledge",
+    "question": "What is the romanized Chinese word for \"airplane\"?",
+    "correctAnswer": "Feiji",
+    "incorrectAnswers": [
+      "Qiche",
+      "Zongxian",
+      "Huojian"
+    ]
+  },
+  {
+    "id": "mc-288",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "General Knowledge",
+    "question": "Which US president officially opened the Panama Canal?",
+    "correctAnswer": "Woodrow Wilson",
+    "incorrectAnswers": [
+      "Calvin Coolidge",
+      "Herbert Hoover",
+      "Theodore Roosevelt"
+    ]
+  },
+  {
+    "id": "mc-289",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "General Knowledge",
+    "question": "Originally another word for the poppy, \"coquelicot\" is a shade of which colour?",
+    "correctAnswer": "Red",
+    "incorrectAnswers": [
+      "Green",
+      "Blue",
+      "Pink"
+    ]
+  },
+  {
+    "id": "mc-290",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "General Knowledge",
+    "question": "Before the 19th century, what was the \"living room\" usually called?",
+    "correctAnswer": "Parlour",
+    "incorrectAnswers": [
+      "Open room",
+      "Sitting room",
+      "Loft"
+    ]
+  },
+  {
+    "id": "mc-291",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "General Knowledge",
+    "question": "What is the longest bridge in the world?",
+    "correctAnswer": "Danyang–Kunshan Grand Bridge, China",
+    "incorrectAnswers": [
+      "Lake Pontchartrain Causeway, USA",
+      "King Fahd Causeway, Saudi Arabia",
+      "Sultan Abdul Halim Muadzam Shah Bridge, Malaysia"
+    ]
+  },
+  {
+    "id": "mc-292",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "General Knowledge",
+    "question": "What does the word \"abulia\" mean?",
+    "correctAnswer": "An inability to make decisions",
+    "incorrectAnswers": [
+      "An inability to stand up",
+      "An inability to concentrate",
+      "An inability to sleep"
+    ]
+  },
+  {
+    "id": "mc-293",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which of these is NOT a city in India?",
+    "correctAnswer": "Islamabad",
+    "incorrectAnswers": [
+      "Hyderabad",
+      "Ahmedabad",
+      "Ghaziabad"
+    ]
+  },
+  {
+    "id": "mc-294",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which of these is NOT a province of China?",
+    "correctAnswer": "Yangtze",
+    "incorrectAnswers": [
+      "Fujian",
+      "Sichuan",
+      "Guangdong"
+    ]
+  },
+  {
+    "id": "mc-295",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "The Andaman and Nicobar Islands are controlled by which country?",
+    "correctAnswer": "India",
+    "incorrectAnswers": [
+      "Vietnam",
+      "Thailand",
+      "Indonesia"
+    ]
+  },
+  {
+    "id": "mc-296",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the largest city and commercial capital of Sri Lanka?",
+    "correctAnswer": "Colombo",
+    "incorrectAnswers": [
+      "Moratuwa",
+      "Negombo",
+      "Kandy"
+    ]
+  },
+  {
+    "id": "mc-297",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "How many countries border Kyrgyzstan?",
+    "correctAnswer": "4",
+    "incorrectAnswers": [
+      "3",
+      "1",
+      "6"
+    ]
+  },
+  {
+    "id": "mc-298",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which of these is an official currency of the Cook Islands?",
+    "correctAnswer": "New Zealand dollar",
+    "incorrectAnswers": [
+      "United States dollar",
+      "British pound",
+      "Australian dollar"
+    ]
+  },
+  {
+    "id": "mc-299",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "The prefix Sino- (as in Sino-American) refers to which nationality?",
+    "correctAnswer": "Chinese",
+    "incorrectAnswers": [
+      "Japanese",
+      "Russian",
+      "Indian"
+    ]
+  },
+  {
+    "id": "mc-300",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "On which Welsh island is the village of Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch?",
+    "correctAnswer": "Anglesey",
+    "incorrectAnswers": [
+      "Barry",
+      "Bardsey",
+      "Caldey"
+    ]
+  },
+  {
+    "id": "mc-301",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "In which country is the city of Haarlem?",
+    "correctAnswer": "The Netherlands",
+    "incorrectAnswers": [
+      "Germany",
+      "United States",
+      "Switzerland"
+    ]
+  },
+  {
+    "id": "mc-302",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "The Svalbard archipelago belongs to which country?",
+    "correctAnswer": "Norway",
+    "incorrectAnswers": [
+      "Denmark",
+      "Iceland",
+      "Russia"
+    ]
+  },
+  {
+    "id": "mc-303",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which country is completely surrounded by South Africa?",
+    "correctAnswer": "Lesotho",
+    "incorrectAnswers": [
+      "Eswatini",
+      "Botswana",
+      "Zimbabwe"
+    ]
+  },
+  {
+    "id": "mc-304",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which of these island countries is located in the Caribbean?",
+    "correctAnswer": "Barbados",
+    "incorrectAnswers": [
+      "Fiji",
+      "Maldives",
+      "Seychelles"
+    ]
+  },
+  {
+    "id": "mc-305",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "In which country is the Taedong River?",
+    "correctAnswer": "North Korea",
+    "incorrectAnswers": [
+      "South Korea",
+      "Japan",
+      "China"
+    ]
+  },
+  {
+    "id": "mc-306",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which national museum is located in Cooperstown, New York?",
+    "correctAnswer": "National Baseball Hall of Fame",
+    "incorrectAnswers": [
+      "Metropolitan Museum of Art",
+      "National Toy Hall of Fame",
+      "Museum of Modern Art"
+    ]
+  },
+  {
+    "id": "mc-307",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the capital of the US state of Wisconsin?",
+    "correctAnswer": "Madison",
+    "incorrectAnswers": [
+      "Milwaukee",
+      "Wisconsin Dells",
+      "Green Bay"
+    ]
+  },
+  {
+    "id": "mc-308",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which of these is NOT a real tectonic plate?",
+    "correctAnswer": "Atlantic Plate",
+    "incorrectAnswers": [
+      "North American Plate",
+      "Eurasian Plate",
+      "Nazca Plate"
+    ]
+  },
+  {
+    "id": "mc-309",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which of these countries is NOT the only country whose name starts with its letter?",
+    "correctAnswer": "Zambia",
+    "incorrectAnswers": [
+      "Qatar",
+      "Yemen",
+      "Oman"
+    ]
+  },
+  {
+    "id": "mc-310",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "The Khyber Pass connects which two countries?",
+    "correctAnswer": "Afghanistan and Pakistan",
+    "incorrectAnswers": [
+      "India and Nepal",
+      "Pakistan and India",
+      "Tajikistan and Kyrgyzstan"
+    ]
+  },
+  {
+    "id": "mc-311",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which of these cities lies between 4° and 5° East longitude?",
+    "correctAnswer": "Amsterdam",
+    "incorrectAnswers": [
+      "Rio de Janeiro",
+      "Toronto",
+      "Hong Kong"
+    ]
+  },
+  {
+    "id": "mc-312",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Bir Tawil, a strip of land claimed by no country, lies on the border of which two countries?",
+    "correctAnswer": "Egypt and Sudan",
+    "incorrectAnswers": [
+      "Israel and Jordan",
+      "Chad and Libya",
+      "Iraq and Saudi Arabia"
+    ]
+  },
+  {
+    "id": "mc-313",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which of these countries was NOT part of Yugoslavia?",
+    "correctAnswer": "Albania",
+    "incorrectAnswers": [
+      "Croatia",
+      "Serbia",
+      "North Macedonia"
+    ]
+  },
+  {
+    "id": "mc-314",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What are the once-rich fishing grounds off the island of Newfoundland called?",
+    "correctAnswer": "Grand Banks",
+    "incorrectAnswers": [
+      "Great Barrier Reef",
+      "Mariana Trench",
+      "Hudson Bay"
+    ]
+  },
+  {
+    "id": "mc-315",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the name of the vast rocky region covering much of eastern Canada?",
+    "correctAnswer": "Canadian Shield",
+    "incorrectAnswers": [
+      "Rocky Mountains",
+      "Appalachian Mountains",
+      "Great Plains"
+    ]
+  },
+  {
+    "id": "mc-316",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "With which country does France share its longest land border?",
+    "correctAnswer": "Brazil",
+    "incorrectAnswers": [
+      "Germany",
+      "Spain",
+      "Belgium"
+    ]
+  },
+  {
+    "id": "mc-317",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "How many piano sonatas did Ludwig van Beethoven write?",
+    "correctAnswer": "32",
+    "incorrectAnswers": [
+      "50",
+      "31",
+      "21"
+    ]
+  },
+  {
+    "id": "mc-318",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "What was the code name of the Allied invasion of southern France on 15 August 1944?",
+    "correctAnswer": "Operation Dragoon",
+    "incorrectAnswers": [
+      "Operation Overlord",
+      "Operation Market Garden",
+      "Operation Torch"
+    ]
+  },
+  {
+    "id": "mc-319",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "In which year was Canada founded as a country (Confederation)?",
+    "correctAnswer": "1867",
+    "incorrectAnswers": [
+      "1798",
+      "1859",
+      "1668"
+    ]
+  },
+  {
+    "id": "mc-320",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "For which side did Francisco Franco fight in the Spanish Civil War?",
+    "correctAnswer": "Nationalists",
+    "incorrectAnswers": [
+      "Republicans",
+      "Popular Front",
+      "Anarchists"
+    ]
+  },
+  {
+    "id": "mc-321",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "From 1940 to 1942, which city was the capital-in-exile of Free France?",
+    "correctAnswer": "Brazzaville",
+    "incorrectAnswers": [
+      "Algiers",
+      "Paris",
+      "Tunis"
+    ]
+  },
+  {
+    "id": "mc-322",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "What was Canada's first capital?",
+    "correctAnswer": "Kingston",
+    "incorrectAnswers": [
+      "Toronto",
+      "Ottawa",
+      "Montreal"
+    ]
+  },
+  {
+    "id": "mc-323",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "What was the name of the German offensive of October 1941 aimed at taking Moscow before winter?",
+    "correctAnswer": "Operation Typhoon",
+    "incorrectAnswers": [
+      "Operation Sunflower",
+      "Operation Barbarossa",
+      "Case Blue"
+    ]
+  },
+  {
+    "id": "mc-324",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Which of these rulers did NOT belong to the Habsburg dynasty?",
+    "correctAnswer": "Philip V of Spain",
+    "incorrectAnswers": [
+      "Charles V",
+      "Philip II of Spain",
+      "Franz Joseph I"
+    ]
+  },
+  {
+    "id": "mc-325",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Which two countries fought the \"Lobster War\" of the 1960s?",
+    "correctAnswer": "France and Brazil",
+    "incorrectAnswers": [
+      "Canada and Norway",
+      "Australia and New Zealand",
+      "United States and United Kingdom"
+    ]
+  },
+  {
+    "id": "mc-326",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Who assassinated US President James A. Garfield?",
+    "correctAnswer": "Charles Guiteau",
+    "incorrectAnswers": [
+      "Sirhan Sirhan",
+      "Leon Czolgosz",
+      "John Wilkes Booth"
+    ]
+  },
+  {
+    "id": "mc-327",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Which of these physicists helped Nazi Germany in its attempt to build a nuclear weapon?",
+    "correctAnswer": "Werner Heisenberg",
+    "incorrectAnswers": [
+      "John von Neumann",
+      "Albert Einstein",
+      "Niels Bohr"
+    ]
+  },
+  {
+    "id": "mc-328",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Who was the first person to travel into space twice?",
+    "correctAnswer": "Gus Grissom",
+    "incorrectAnswers": [
+      "Vladimir Komarov",
+      "Charles Conrad",
+      "Yuri Gagarin"
+    ]
+  },
+  {
+    "id": "mc-329",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Who invented the flying shuttle in 1733, a key step in the industrialisation of weaving?",
+    "correctAnswer": "John Kay",
+    "incorrectAnswers": [
+      "James Hargreaves",
+      "Richard Arkwright",
+      "John Deere"
+    ]
+  },
+  {
+    "id": "mc-330",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "What was the name of the spy network that helped George Washington during the American Revolutionary War?",
+    "correctAnswer": "Culper Ring",
+    "incorrectAnswers": [
+      "New York Spy Ring",
+      "Washington's Spies",
+      "Liberty Circle"
+    ]
+  },
+  {
+    "id": "mc-331",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "In which year did the sarin gas attack on the Tokyo subway take place?",
+    "correctAnswer": "1995",
+    "incorrectAnswers": [
+      "2001",
+      "2011",
+      "1991"
+    ]
+  },
+  {
+    "id": "mc-332",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Who was US President when the Gadsden Purchase was signed?",
+    "correctAnswer": "Franklin Pierce",
+    "incorrectAnswers": [
+      "Andrew Johnson",
+      "Abraham Lincoln",
+      "James Polk"
+    ]
+  },
+  {
+    "id": "mc-333",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "How long did the Warsaw Uprising of 1944 last?",
+    "correctAnswer": "63 days",
+    "incorrectAnswers": [
+      "20 days",
+      "55 days",
+      "224 days"
+    ]
+  },
+  {
+    "id": "mc-334",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "On which date was Adolf Hitler appointed Chancellor of Germany?",
+    "correctAnswer": "30 January 1933",
+    "incorrectAnswers": [
+      "1 September 1939",
+      "27 February 1933",
+      "6 October 1939"
+    ]
+  },
+  {
+    "id": "mc-335",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "The Bohemian Revolt of 1618 began after Protestants in Prague did what to the Catholic regents?",
+    "correctAnswer": "Threw them out of a window",
+    "incorrectAnswers": [
+      "Insulted their families",
+      "Locked them in the stocks",
+      "Burned their palace"
+    ]
+  },
+  {
+    "id": "mc-336",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Which Australian Prime Minister disappeared while swimming in 1967 and was never found?",
+    "correctAnswer": "Harold Holt",
+    "incorrectAnswers": [
+      "Paul Keating",
+      "Edmund Barton",
+      "Robert Menzies"
+    ]
+  },
+  {
+    "id": "mc-337",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Which of these physicists did NOT work on the Manhattan Project?",
+    "correctAnswer": "Murray Gell-Mann",
+    "incorrectAnswers": [
+      "Richard Feynman",
+      "J. Robert Oppenheimer",
+      "John von Neumann"
+    ]
+  },
+  {
+    "id": "mc-338",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Who was Bohdan Khmelnytsky?",
+    "correctAnswer": "Leader of the Ukrainian Cossacks",
+    "incorrectAnswers": [
+      "General Secretary of the Soviet Communist Party",
+      "Prince of Wallachia",
+      "Grand Prince of Novgorod"
+    ]
+  },
+  {
+    "id": "mc-339",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "After the Battle of Marj Dabiq in 1516, the Ottomans took Jerusalem from which sultanate?",
+    "correctAnswer": "Mamluk Sultanate",
+    "incorrectAnswers": [
+      "Ayyubid Sultanate",
+      "Umayyad Caliphate",
+      "Seljuk Sultanate"
+    ]
+  },
+  {
+    "id": "mc-340",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "The handover of which territory in 1997 is often seen as marking the end of the British Empire?",
+    "correctAnswer": "Hong Kong",
+    "incorrectAnswers": [
+      "India",
+      "Australia",
+      "Ireland"
+    ]
+  },
+  {
+    "id": "mc-341",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Before switching to the Gregorian calendar in 1752, on what date did the new year begin in Britain and its American colonies?",
+    "correctAnswer": "25 March",
+    "incorrectAnswers": [
+      "1 June",
+      "25 September",
+      "1 December"
+    ]
+  },
+  {
+    "id": "mc-342",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "In which country did the Eureka Rebellion of 1854 take place?",
+    "correctAnswer": "Australia",
+    "incorrectAnswers": [
+      "India",
+      "Canada",
+      "Brazil"
+    ]
+  },
+  {
+    "id": "mc-343",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Mathematics",
+    "question": "The paradox of \"the set of all sets that do not contain themselves\" is named after which English philosopher?",
+    "correctAnswer": "Bertrand Russell",
+    "incorrectAnswers": [
+      "Francis Bacon",
+      "John Locke",
+      "Alfred North Whitehead"
+    ]
+  },
+  {
+    "id": "mc-344",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Mathematics",
+    "question": "Which is the only Millennium Prize Problem that has been solved so far?",
+    "correctAnswer": "Poincaré conjecture",
+    "incorrectAnswers": [
+      "P vs. NP problem",
+      "Riemann hypothesis",
+      "Hodge conjecture"
+    ]
+  },
+  {
+    "id": "mc-345",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Mathematics",
+    "question": "Which of these mathematicians made major contributions to game theory?",
+    "correctAnswer": "John von Neumann",
+    "incorrectAnswers": [
+      "Carl Friedrich Gauss",
+      "Leonhard Euler",
+      "Stefan Banach"
+    ]
+  },
+  {
+    "id": "mc-346",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Mathematics",
+    "question": "Which of these did the mathematician Leonhard Euler NOT develop?",
+    "correctAnswer": "An improvement to the Fast Fourier Transform",
+    "incorrectAnswers": [
+      "A method for solving first-order differential equations",
+      "An identity linking e, pi and i",
+      "A formula linking the vertices, edges and faces of a polyhedron"
+    ]
+  },
+  {
+    "id": "mc-347",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Music",
+    "question": "Which was the first studio album released online with a \"pay what you want\" price?",
+    "correctAnswer": "In Rainbows",
+    "incorrectAnswers": [
+      "The Help Album",
+      "Jack Ü",
+      "Blackstar"
+    ]
+  },
+  {
+    "id": "mc-348",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Music",
+    "question": "Which artist's version of the song \"The Tide Is High\" came first?",
+    "correctAnswer": "The Paragons",
+    "incorrectAnswers": [
+      "Blondie",
+      "Kardinal Offishall",
+      "Atomic Kitten"
+    ]
+  },
+  {
+    "id": "mc-349",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Music",
+    "question": "Which Soviet rock singer is commemorated by a memorial wall in Moscow?",
+    "correctAnswer": "Viktor Tsoi",
+    "incorrectAnswers": [
+      "Jimi Hendrix",
+      "Brian Jones",
+      "Vladimir Vysotsky"
+    ]
+  },
+  {
+    "id": "mc-350",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Mythology",
+    "question": "According to Algonquian folklore, how does a person become a Wendigo?",
+    "correctAnswer": "By committing cannibalism",
+    "incorrectAnswers": [
+      "By mutilating animal corpses",
+      "By performing a murder ritual",
+      "By drinking the blood of many animals"
+    ]
+  },
+  {
+    "id": "mc-351",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Mythology",
+    "question": "Talos, the giant bronze man of Greek myth, protected which island?",
+    "correctAnswer": "Crete",
+    "incorrectAnswers": [
+      "Sardinia",
+      "Sicily",
+      "Cyprus"
+    ]
+  },
+  {
+    "id": "mc-352",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Mythology",
+    "question": "In Greek mythology, who was the daughter of King Minos?",
+    "correctAnswer": "Ariadne",
+    "incorrectAnswers": [
+      "Athena",
+      "Andromeda",
+      "Antigone"
+    ]
+  },
+  {
+    "id": "mc-353",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Mythology",
+    "question": "Which Egyptian god was associated with fertility and lettuce?",
+    "correctAnswer": "Min",
+    "incorrectAnswers": [
+      "Menu",
+      "Mut",
+      "Meret"
+    ]
+  },
+  {
+    "id": "mc-354",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Mythology",
+    "question": "Which minor Greek god was the protector of crafts such as cheese-making and beekeeping?",
+    "correctAnswer": "Aristaeus",
+    "incorrectAnswers": [
+      "Autonoe",
+      "Carme",
+      "Cephisso"
+    ]
+  },
+  {
+    "id": "mc-355",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which scientific unit is named after an Italian nobleman?",
+    "correctAnswer": "Volt",
+    "incorrectAnswers": [
+      "Pascal",
+      "Ohm",
+      "Hertz"
+    ]
+  },
+  {
+    "id": "mc-356",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Roughly how hot can the core of the Sun get?",
+    "correctAnswer": "About 15 million °C",
+    "incorrectAnswers": [
+      "About 520,000 °C",
+      "About 4.4 billion °C",
+      "About 6,000 °C"
+    ]
+  },
+  {
+    "id": "mc-357",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "What is the scientific name of the red fox?",
+    "correctAnswer": "Vulpes vulpes",
+    "incorrectAnswers": [
+      "Canis vulpes",
+      "Vulpes lagopus",
+      "Vulpes zerda"
+    ]
+  },
+  {
+    "id": "mc-358",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Where in the human body is the pineal gland located?",
+    "correctAnswer": "Brain",
+    "incorrectAnswers": [
+      "Groin",
+      "Chest",
+      "Throat"
+    ]
+  },
+  {
+    "id": "mc-359",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Folic acid is the synthetic form of which vitamin?",
+    "correctAnswer": "Vitamin B9",
+    "incorrectAnswers": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D"
+    ]
+  },
+  {
+    "id": "mc-360",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "What is the SI unit of electrical inductance?",
+    "correctAnswer": "Henry",
+    "incorrectAnswers": [
+      "Weber",
+      "Coulomb",
+      "Mho"
+    ]
+  },
+  {
+    "id": "mc-361",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which genetic condition is caused by an extra Y chromosome (XYY)?",
+    "correctAnswer": "Jacobs syndrome",
+    "incorrectAnswers": [
+      "Klinefelter syndrome",
+      "Turner syndrome",
+      "Down syndrome"
+    ]
+  },
+  {
+    "id": "mc-362",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "An organic compound is an alcohol if it has which functional group?",
+    "correctAnswer": "Hydroxyl",
+    "incorrectAnswers": [
+      "Carbonyl",
+      "Alkyl",
+      "Aldehyde"
+    ]
+  },
+  {
+    "id": "mc-363",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "How many particles are there in one mole?",
+    "correctAnswer": "6.022 × 10^23",
+    "incorrectAnswers": [
+      "6.002 × 10^22",
+      "6.022 × 10^22",
+      "6.002 × 10^23"
+    ]
+  },
+  {
+    "id": "mc-364",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "In which human organ are the islets of Langerhans found?",
+    "correctAnswer": "Pancreas",
+    "incorrectAnswers": [
+      "Kidney",
+      "Liver",
+      "Brain"
+    ]
+  },
+  {
+    "id": "mc-365",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "How long is a light-year?",
+    "correctAnswer": "About 9.46 trillion kilometres",
+    "incorrectAnswers": [
+      "1 astronomical unit",
+      "About 105 Earth years",
+      "About 501 million miles"
+    ]
+  },
+  {
+    "id": "mc-366",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "The word \"science\" comes from the Latin \"scire\", meaning what?",
+    "correctAnswer": "To know",
+    "incorrectAnswers": [
+      "To measure",
+      "To live",
+      "To count"
+    ]
+  },
+  {
+    "id": "mc-367",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which of the following is NOT a real chemical element?",
+    "correctAnswer": "Vitrainium",
+    "incorrectAnswers": [
+      "Praseodymium",
+      "Hassium",
+      "Lutetium"
+    ]
+  },
+  {
+    "id": "mc-368",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which of these are cells of the adaptive immune system?",
+    "correctAnswer": "Cytotoxic T cells",
+    "incorrectAnswers": [
+      "Dendritic cells",
+      "Natural killer cells",
+      "Macrophages"
+    ]
+  },
+  {
+    "id": "mc-369",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "What is the most potent toxin known?",
+    "correctAnswer": "Botulinum toxin",
+    "incorrectAnswers": [
+      "Ricin",
+      "Cyanide",
+      "Arsenic"
+    ]
+  },
+  {
+    "id": "mc-370",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Botanically speaking, which of these fruits is NOT a berry?",
+    "correctAnswer": "Strawberry",
+    "incorrectAnswers": [
+      "Blueberry",
+      "Banana",
+      "Grape"
+    ]
+  },
+  {
+    "id": "mc-371",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which of these theorised particles has never been observed?",
+    "correctAnswer": "Graviton",
+    "incorrectAnswers": [
+      "Z boson",
+      "Tau neutrino",
+      "Gluon"
+    ]
+  },
+  {
+    "id": "mc-372",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which device is used to demonstrate that the Earth rotates on its axis?",
+    "correctAnswer": "Foucault pendulum",
+    "incorrectAnswers": [
+      "Polaris star chart",
+      "Sundial",
+      "Seismograph"
+    ]
+  },
+  {
+    "id": "mc-373",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Burning which of these metals produces a brilliant white flame?",
+    "correctAnswer": "Magnesium",
+    "incorrectAnswers": [
+      "Copper",
+      "Lithium",
+      "Lead"
+    ]
+  },
+  {
+    "id": "mc-374",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which of these is NOT a type of neuron?",
+    "correctAnswer": "Perceptual neuron",
+    "incorrectAnswers": [
+      "Sensory neuron",
+      "Motor neuron",
+      "Interneuron"
+    ]
+  },
+  {
+    "id": "mc-375",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "In physics, conservation of energy and momentum both follow from which theorem?",
+    "correctAnswer": "Noether's theorem",
+    "incorrectAnswers": [
+      "Bell's theorem",
+      "Wick's theorem",
+      "Carnot's theorem"
+    ]
+  },
+  {
+    "id": "mc-376",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Muscle fibres are made of bundles of long organelles called what?",
+    "correctAnswer": "Myofibrils",
+    "incorrectAnswers": [
+      "Epimysium",
+      "Myofilaments",
+      "Myocardium"
+    ]
+  },
+  {
+    "id": "mc-377",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which of these animals belongs to the class Chondrichthyes?",
+    "correctAnswer": "Great white shark",
+    "incorrectAnswers": [
+      "Octopus",
+      "Killer whale",
+      "Catfish"
+    ]
+  },
+  {
+    "id": "mc-378",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "The Big Bang theory was first proposed by a priest of which church?",
+    "correctAnswer": "Catholic",
+    "incorrectAnswers": [
+      "Anglican",
+      "Lutheran",
+      "Orthodox"
+    ]
+  },
+  {
+    "id": "mc-379",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which law relates the electric flux out of a closed surface to the charge inside it?",
+    "correctAnswer": "Gauss's law",
+    "incorrectAnswers": [
+      "Faraday's law",
+      "Ampère's law",
+      "Biot–Savart law"
+    ]
+  },
+  {
+    "id": "mc-380",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "What is the auditory illusion of a note that seems to rise forever called?",
+    "correctAnswer": "Shepard tone",
+    "incorrectAnswers": [
+      "Glissando illusion",
+      "Fransen effect",
+      "McGurk effect"
+    ]
+  },
+  {
+    "id": "mc-381",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which of these compounds is NOT found in gastric acid?",
+    "correctAnswer": "Sulfuric acid",
+    "incorrectAnswers": [
+      "Hydrochloric acid",
+      "Potassium chloride",
+      "Sodium chloride"
+    ]
+  },
+  {
+    "id": "mc-382",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Which mass extinction, caused by an asteroid impact, wiped out most non-avian dinosaurs?",
+    "correctAnswer": "Cretaceous–Paleogene",
+    "incorrectAnswers": [
+      "Triassic–Jurassic",
+      "Permian–Triassic",
+      "Ordovician–Silurian"
+    ]
+  },
+  {
+    "id": "mc-383",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "What causes the sound of a heartbeat?",
+    "correctAnswer": "The heart valves closing",
+    "incorrectAnswers": [
+      "The heart chambers contracting",
+      "Blood leaving the heart",
+      "The heart chambers relaxing"
+    ]
+  },
+  {
+    "id": "mc-384",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Sports",
+    "question": "In which year was the third Super Bowl held?",
+    "correctAnswer": "1969",
+    "incorrectAnswers": [
+      "1968",
+      "1971",
+      "1970"
+    ]
+  },
+  {
+    "id": "mc-385",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Sports",
+    "question": "Who won the 1998 Daytona 500?",
+    "correctAnswer": "Dale Earnhardt",
+    "incorrectAnswers": [
+      "John Andretti",
+      "Jeff Gordon",
+      "Michael Waltrip"
+    ]
+  },
+  {
+    "id": "mc-386",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "HARD",
+    "category": "Sports",
+    "question": "How many points did LeBron James score in his first NBA game?",
+    "correctAnswer": "25",
+    "incorrectAnswers": [
+      "19",
+      "69",
+      "41"
+    ]
+  }
+]

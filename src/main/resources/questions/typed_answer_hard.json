@@ -1,0 +1,379 @@
+[
+  {
+    "id": "ta-097",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Computers",
+    "question": "What was the name of the 2014 security bug found in the OpenSSL cryptography library?",
+    "acceptedAnswers": [
+      "Heartbleed"
+    ]
+  },
+  {
+    "id": "ta-098",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the Finnish name for Finland?",
+    "acceptedAnswers": [
+      "Suomi"
+    ]
+  },
+  {
+    "id": "ta-099",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the name of the narrow strip of land connecting North and South America?",
+    "acceptedAnswers": [
+      "Isthmus of Panama",
+      "Panama",
+      "The Isthmus of Panama"
+    ]
+  },
+  {
+    "id": "ta-100",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the capital of Mauritius?",
+    "acceptedAnswers": [
+      "Port Louis"
+    ]
+  },
+  {
+    "id": "ta-101",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the capital of the US state of Michigan?",
+    "acceptedAnswers": [
+      "Lansing"
+    ]
+  },
+  {
+    "id": "ta-102",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which is the largest freshwater lake in the world by surface area?",
+    "acceptedAnswers": [
+      "Lake Superior",
+      "Superior"
+    ]
+  },
+  {
+    "id": "ta-103",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the tallest mountain in Canada?",
+    "acceptedAnswers": [
+      "Mount Logan",
+      "Logan",
+      "Mt Logan",
+      "Mt. Logan"
+    ]
+  },
+  {
+    "id": "ta-104",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the capital of Bermuda?",
+    "acceptedAnswers": [
+      "Hamilton"
+    ]
+  },
+  {
+    "id": "ta-105",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Ouagadougou is the capital of which African country?",
+    "acceptedAnswers": [
+      "Burkina Faso"
+    ]
+  },
+  {
+    "id": "ta-106",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "In which country is the historic city of Timbuktu?",
+    "acceptedAnswers": [
+      "Mali"
+    ]
+  },
+  {
+    "id": "ta-107",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the second-largest city in Lithuania?",
+    "acceptedAnswers": [
+      "Kaunas"
+    ]
+  },
+  {
+    "id": "ta-108",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which African country has an AK-47 rifle on its national flag?",
+    "acceptedAnswers": [
+      "Mozambique"
+    ]
+  },
+  {
+    "id": "ta-109",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "What is the capital of Suriname?",
+    "acceptedAnswers": [
+      "Paramaribo"
+    ]
+  },
+  {
+    "id": "ta-110",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "The Maluku Islands, also known as the Spice Islands, belong to which country?",
+    "acceptedAnswers": [
+      "Indonesia"
+    ]
+  },
+  {
+    "id": "ta-111",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "Which is the largest freshwater lake in the world by volume?",
+    "acceptedAnswers": [
+      "Lake Baikal",
+      "Baikal"
+    ]
+  },
+  {
+    "id": "ta-112",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Spain was formed by the marriage of Isabella I of Castile and Ferdinand II of which other kingdom?",
+    "acceptedAnswers": [
+      "Aragon",
+      "Aragón"
+    ]
+  },
+  {
+    "id": "ta-113",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Which Greek philosopher is associated with the phrase \"I know that I know nothing\"?",
+    "acceptedAnswers": [
+      "Socrates"
+    ]
+  },
+  {
+    "id": "ta-114",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Who was the last emperor of Mexico?",
+    "acceptedAnswers": [
+      "Maximilian",
+      "Maximilian I",
+      "Ferdinand Maximilian",
+      "Emperor Maximilian"
+    ]
+  },
+  {
+    "id": "ta-115",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "In which year did the Battle of Verdun take place?",
+    "acceptedAnswers": [
+      "1916"
+    ]
+  },
+  {
+    "id": "ta-116",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "What was New York City originally called by its Dutch founders?",
+    "acceptedAnswers": [
+      "New Amsterdam"
+    ]
+  },
+  {
+    "id": "ta-117",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Which ancient manuscripts were discovered by Bedouin shepherds in caves at Qumran in the 1940s?",
+    "acceptedAnswers": [
+      "Dead Sea Scrolls",
+      "The Dead Sea Scrolls"
+    ]
+  },
+  {
+    "id": "ta-118",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Which civilisation built the ancient city of Chichén Itzá?",
+    "acceptedAnswers": [
+      "Maya",
+      "Mayans",
+      "The Maya",
+      "Mayan",
+      "Maya civilization"
+    ]
+  },
+  {
+    "id": "ta-119",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Mathematics",
+    "question": "In the complex plane, multiplying by i rotates a point anticlockwise by how many degrees?",
+    "acceptedAnswers": [
+      "90",
+      "90 degrees",
+      "90°"
+    ]
+  },
+  {
+    "id": "ta-120",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Mathematics",
+    "question": "What is the smallest number that can be written as the sum of two positive cubes in two different ways?",
+    "acceptedAnswers": [
+      "1729",
+      "1,729"
+    ]
+  },
+  {
+    "id": "ta-121",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Mathematics",
+    "question": "In physics, what is the name for the rate of change of acceleration with respect to time?",
+    "acceptedAnswers": [
+      "Jerk"
+    ]
+  },
+  {
+    "id": "ta-122",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Mathematics",
+    "question": "What is the decimal number 31 written in hexadecimal?",
+    "acceptedAnswers": [
+      "1F",
+      "0x1F"
+    ]
+  },
+  {
+    "id": "ta-123",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Mythology",
+    "question": "In Norse mythology, what is the name of the giant ash tree that connects the nine worlds?",
+    "acceptedAnswers": [
+      "Yggdrasil",
+      "Yggdrasill"
+    ]
+  },
+  {
+    "id": "ta-124",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "What is the common name for medial tibial stress syndrome?",
+    "acceptedAnswers": [
+      "Shin splints",
+      "Shin splint"
+    ]
+  },
+  {
+    "id": "ta-125",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Because centipedes always have an odd number of leg pairs, which round number of legs can a centipede never have?",
+    "acceptedAnswers": [
+      "100",
+      "one hundred"
+    ]
+  },
+  {
+    "id": "ta-126",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "What is the name of the fuzzy cloud of gas surrounding a comet's nucleus?",
+    "acceptedAnswers": [
+      "Coma",
+      "The coma"
+    ]
+  },
+  {
+    "id": "ta-127",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "What is the molecular formula of glucose?",
+    "acceptedAnswers": [
+      "C6H12O6"
+    ]
+  },
+  {
+    "id": "ta-128",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Quercus robur is the scientific name of which common tree?",
+    "acceptedAnswers": [
+      "Oak",
+      "English oak",
+      "Common oak",
+      "Oak tree"
+    ]
+  },
+  {
+    "id": "ta-129",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Isobutylphenylpropanoic acid is better known as which painkiller?",
+    "acceptedAnswers": [
+      "Ibuprofen"
+    ]
+  },
+  {
+    "id": "ta-130",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "What is the SI unit of luminous intensity?",
+    "acceptedAnswers": [
+      "Candela"
+    ]
+  },
+  {
+    "id": "ta-131",
+    "type": "TYPED_ANSWER",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "What was the first organic compound to be made from inorganic compounds, by Friedrich Wöhler in 1828?",
+    "acceptedAnswers": [
+      "Urea"
+    ]
+  }
+]

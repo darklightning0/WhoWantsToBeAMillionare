@@ -1,0 +1,570 @@
+[
+  {
+    "id": "tf-062",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Animals",
+    "question": "Sea otters have pouches under their forearms for storing food and rocks.",
+    "answer": true
+  },
+  {
+    "id": "tf-063",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Animals",
+    "question": "Sea sponges have hearts.",
+    "answer": false
+  },
+  {
+    "id": "tf-064",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Animals",
+    "question": "Hyenas are more closely related to cats than to dogs.",
+    "answer": true
+  },
+  {
+    "id": "tf-065",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Animals",
+    "question": "The echidna is a monotreme.",
+    "answer": true
+  },
+  {
+    "id": "tf-066",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Animals",
+    "question": "The \"mountain chicken\" is a type of chicken.",
+    "answer": false
+  },
+  {
+    "id": "tf-067",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Animals",
+    "question": "The platypus is a mammal.",
+    "answer": true
+  },
+  {
+    "id": "tf-068",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Animals",
+    "question": "Finnish Lapphund dogs were used for herding reindeer.",
+    "answer": true
+  },
+  {
+    "id": "tf-069",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "The ARM processor architecture was originally developed by Acorn Computers.",
+    "answer": true
+  },
+  {
+    "id": "tf-070",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "The Raspberry Pi single-board computers were created in the United States.",
+    "answer": false
+  },
+  {
+    "id": "tf-071",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "Linus Sebastian is the creator of the Linux kernel.",
+    "answer": false
+  },
+  {
+    "id": "tf-072",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "The HTML5 standard was published in 2014.",
+    "answer": true
+  },
+  {
+    "id": "tf-073",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "AMD created the first consumer 64-bit x86 processor.",
+    "answer": true
+  },
+  {
+    "id": "tf-074",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "macOS is based on Linux.",
+    "answer": false
+  },
+  {
+    "id": "tf-075",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "To get around US munitions export laws, the creator of PGP published its source code as a printed book.",
+    "answer": true
+  },
+  {
+    "id": "tf-076",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "Redis is a relational database server.",
+    "answer": false
+  },
+  {
+    "id": "tf-077",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Computers",
+    "question": "The software acronym \"I18N\" comes from the word \"interlocalization\".",
+    "answer": false
+  },
+  {
+    "id": "tf-078",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "A pencil's \"lead\" is typically made from graphite, not lead.",
+    "answer": true
+  },
+  {
+    "id": "tf-079",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "\"Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo.\" is a grammatically correct sentence.",
+    "answer": true
+  },
+  {
+    "id": "tf-080",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "Haggis is traditionally eaten on Burns Night.",
+    "answer": true
+  },
+  {
+    "id": "tf-081",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "\"Santa Claus\" is a variety of melon.",
+    "answer": true
+  },
+  {
+    "id": "tf-082",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "The British organisation CAMRA stands for the Campaign for Real Ale.",
+    "answer": true
+  },
+  {
+    "id": "tf-083",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "Popcorn was invented in 1871 by Frederick W. Rueckheim, who sold the snack on the streets of Chicago.",
+    "answer": false
+  },
+  {
+    "id": "tf-084",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "The French word for \"glass\" is \"glace\".",
+    "answer": false
+  },
+  {
+    "id": "tf-085",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "Instant mashed potatoes were invented by Canadian Edward Asselbergs in 1962.",
+    "answer": true
+  },
+  {
+    "id": "tf-086",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "The vapour produced by e-cigarettes is just water.",
+    "answer": false
+  },
+  {
+    "id": "tf-087",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "The term \"spam\" (for unwanted messages) came before the food product \"Spam\".",
+    "answer": false
+  },
+  {
+    "id": "tf-088",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "The smiley face was created by commercial artist Harvey Ball.",
+    "answer": true
+  },
+  {
+    "id": "tf-089",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "The fast food chains Carl's Jr. and Hardee's are owned by the same company.",
+    "answer": true
+  },
+  {
+    "id": "tf-090",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "Coca-Cola's original colour was green.",
+    "answer": false
+  },
+  {
+    "id": "tf-091",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "There are 86,400 seconds in a day.",
+    "answer": true
+  },
+  {
+    "id": "tf-092",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "The Furby toy was released in 1998.",
+    "answer": true
+  },
+  {
+    "id": "tf-093",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "Albert Einstein had trouble with mathematics when he was in school.",
+    "answer": false
+  },
+  {
+    "id": "tf-094",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "Pure water is a good conductor of electricity.",
+    "answer": false
+  },
+  {
+    "id": "tf-095",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "Crystal Pepsi was first sold in US markets in 1993.",
+    "answer": false
+  },
+  {
+    "id": "tf-096",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "Only a small percentage of the world's population is lactose intolerant.",
+    "answer": false
+  },
+  {
+    "id": "tf-097",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "The bikini is named after Bikini Atoll, where the United States tested atomic bombs.",
+    "answer": true
+  },
+  {
+    "id": "tf-098",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "General Knowledge",
+    "question": "The scientific name for the Southern Lights is Aurora Australis.",
+    "answer": true
+  },
+  {
+    "id": "tf-099",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "The capital of the US state of Ohio is Chillicothe.",
+    "answer": false
+  },
+  {
+    "id": "tf-100",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "Tartu is the capital of Estonia.",
+    "answer": false
+  },
+  {
+    "id": "tf-101",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "The longest place name in the United States is Lake Chargoggagoggmanchauggagoggchaubunagungamaugg, near Webster, Massachusetts.",
+    "answer": true
+  },
+  {
+    "id": "tf-102",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "Russia shares a land border with North Korea.",
+    "answer": true
+  },
+  {
+    "id": "tf-103",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "The island of Borneo is politically divided among three countries.",
+    "answer": true
+  },
+  {
+    "id": "tf-104",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "The flag of South Africa features seven colours.",
+    "answer": false
+  },
+  {
+    "id": "tf-105",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Geography",
+    "question": "Norway has a larger land area than Sweden.",
+    "answer": false
+  },
+  {
+    "id": "tf-106",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "Martin Luther King Jr. and Anne Frank were born in the same year.",
+    "answer": true
+  },
+  {
+    "id": "tf-107",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "Augustus was the cousin of Julius Caesar.",
+    "answer": false
+  },
+  {
+    "id": "tf-108",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "The Panama Canal opened to traffic within 30 days of the start of World War I.",
+    "answer": true
+  },
+  {
+    "id": "tf-109",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "The Fourth Crusade lasted from 1095 to 1099 AD.",
+    "answer": false
+  },
+  {
+    "id": "tf-110",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "There are 13 months in the Ethiopian calendar.",
+    "answer": true
+  },
+  {
+    "id": "tf-111",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "The Korean War ended in 1953 without any ceasefire.",
+    "answer": false
+  },
+  {
+    "id": "tf-112",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "Canada was ceded to Britain under the 1763 Treaty of Paris.",
+    "answer": true
+  },
+  {
+    "id": "tf-113",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "The first televised US presidential debate was between Jimmy Carter and Gerald Ford.",
+    "answer": false
+  },
+  {
+    "id": "tf-114",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "Ronald Reagan was the first US president to appoint a woman to the Supreme Court.",
+    "answer": true
+  },
+  {
+    "id": "tf-115",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "History",
+    "question": "Franz Joseph I was the last emperor of Austria.",
+    "answer": false
+  },
+  {
+    "id": "tf-116",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Mythology",
+    "question": "The Japanese god Izanagi successfully brought his wife Izanami back from the underworld.",
+    "answer": false
+  },
+  {
+    "id": "tf-117",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Mythology",
+    "question": "In Greek mythology, Hera is the goddess of the harvest.",
+    "answer": false
+  },
+  {
+    "id": "tf-118",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Mythology",
+    "question": "In Norse mythology, Loki is a mother.",
+    "answer": true
+  },
+  {
+    "id": "tf-119",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "The planet Mars has two moons orbiting it.",
+    "answer": true
+  },
+  {
+    "id": "tf-120",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "A defibrillator is used to restart a heart that has completely stopped beating.",
+    "answer": false
+  },
+  {
+    "id": "tf-121",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "Shrimp can swim backwards.",
+    "answer": true
+  },
+  {
+    "id": "tf-122",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "Steel is an alloy of iron and carbon.",
+    "answer": true
+  },
+  {
+    "id": "tf-123",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "Sound can travel through a vacuum.",
+    "answer": false
+  },
+  {
+    "id": "tf-124",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "Tachycardia refers to a resting heart rate near or over 100 beats per minute.",
+    "answer": true
+  },
+  {
+    "id": "tf-125",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "Centripetal force is an apparent force that pushes a body outward when it moves around a centre.",
+    "answer": false
+  },
+  {
+    "id": "tf-126",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "Like the Neanderthals, modern humans also interbred with the Denisovans.",
+    "answer": true
+  },
+  {
+    "id": "tf-127",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Science & Nature",
+    "question": "Male giant pandas do handstands while urinating on trees.",
+    "answer": true
+  },
+  {
+    "id": "tf-128",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Sports",
+    "question": "During Wimbledon, spectators can buy tennis balls that have been used in matches.",
+    "answer": true
+  },
+  {
+    "id": "tf-129",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Sports",
+    "question": "In 2008, Usain Bolt set the 100 metres world record with one shoelace untied.",
+    "answer": true
+  },
+  {
+    "id": "tf-130",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Sports",
+    "question": "Wilt Chamberlain scored his famous 100-point game against the New York Knicks in 1962.",
+    "answer": true
+  },
+  {
+    "id": "tf-131",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Sports",
+    "question": "Skateboarding was included in the 2020 Summer Olympics in Tokyo.",
+    "answer": true
+  },
+  {
+    "id": "tf-132",
+    "type": "TRUE_FALSE",
+    "difficulty": "MEDIUM",
+    "category": "Sports",
+    "question": "Tennis was once known as racquetball.",
+    "answer": false
+  }
+]

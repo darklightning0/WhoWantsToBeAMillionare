@@ -1,0 +1,114 @@
+[
+  {
+    "id": "tf-133",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "General Knowledge",
+    "question": "This is the correct spelling of \"Supercalifragilisticexpialidocious\".",
+    "answer": true
+  },
+  {
+    "id": "tf-134",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "General Knowledge",
+    "question": "Samhainophobia is the term used for an abnormal and persistent fear of Halloween.",
+    "answer": true
+  },
+  {
+    "id": "tf-135",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "General Knowledge",
+    "question": "\"Number 16 Bus Shelter\" was a child's name approved by the New Zealand government.",
+    "answer": true
+  },
+  {
+    "id": "tf-136",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "There are 47 prefectures in Japan.",
+    "answer": true
+  },
+  {
+    "id": "tf-137",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "The flag of Belarus has a red and white embroidery pattern on the hoist side.",
+    "answer": true
+  },
+  {
+    "id": "tf-138",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "Geography",
+    "question": "The two largest ethnic groups in Belgium are the Flemish and the Walloons.",
+    "answer": true
+  },
+  {
+    "id": "tf-139",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "Joseph Stalin's real name was Ioseb Besarionis dze Jughashvili.",
+    "answer": true
+  },
+  {
+    "id": "tf-140",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "History",
+    "question": "The Battle of Trafalgar took place on 23 October 1805.",
+    "answer": false
+  },
+  {
+    "id": "tf-141",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "Mythology",
+    "question": "Skaði is the Norse goddess of skiing, mountains, winter and bowhunting.",
+    "answer": true
+  },
+  {
+    "id": "tf-142",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "Mythology",
+    "question": "Janus was the Roman god of doorways and passageways.",
+    "answer": true
+  },
+  {
+    "id": "tf-143",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "The chemical element lithium is named after the country of Lithuania.",
+    "answer": false
+  },
+  {
+    "id": "tf-144",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "One food Calorie (capital C) is not the same amount of energy as one calorie (small c).",
+    "answer": true
+  },
+  {
+    "id": "tf-145",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Frederick Banting and John Macleod won a Nobel Prize for their contributions to quantum mechanics.",
+    "answer": false
+  },
+  {
+    "id": "tf-146",
+    "type": "TRUE_FALSE",
+    "difficulty": "HARD",
+    "category": "Science & Nature",
+    "question": "Albert Einstein won the Nobel Prize for his theory of relativity.",
+    "answer": false
+  }
+]

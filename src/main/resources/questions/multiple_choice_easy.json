@@ -1,0 +1,1055 @@
+[
+  {
+    "id": "mc-001",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "What do you call a baby bat?",
+    "correctAnswer": "Pup",
+    "incorrectAnswers": [
+      "Cub",
+      "Chick",
+      "Kid"
+    ]
+  },
+  {
+    "id": "mc-002",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "Which class of animals do newts belong to?",
+    "correctAnswer": "Amphibians",
+    "incorrectAnswers": [
+      "Fish",
+      "Reptiles",
+      "Mammals"
+    ]
+  },
+  {
+    "id": "mc-003",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "What is the national animal of India?",
+    "correctAnswer": "Tiger",
+    "incorrectAnswers": [
+      "Lion",
+      "Horse",
+      "Camel"
+    ]
+  },
+  {
+    "id": "mc-004",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "What colour is a female common blackbird?",
+    "correctAnswer": "Brown",
+    "incorrectAnswers": [
+      "Black",
+      "White",
+      "Yellow"
+    ]
+  },
+  {
+    "id": "mc-005",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "The kākāpō, a large flightless nocturnal parrot, is native to which country?",
+    "correctAnswer": "New Zealand",
+    "incorrectAnswers": [
+      "South Africa",
+      "Australia",
+      "Madagascar"
+    ]
+  },
+  {
+    "id": "mc-006",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "In computing, what does MIDI stand for?",
+    "correctAnswer": "Musical Instrument Digital Interface",
+    "incorrectAnswers": [
+      "Musical Interface of Digital Instruments",
+      "Modular Interface of Digital Instruments",
+      "Musical Instrument Data Interface"
+    ]
+  },
+  {
+    "id": "mc-007",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "In software releases, what does LTS stand for?",
+    "correctAnswer": "Long-term support",
+    "incorrectAnswers": [
+      "Last tested snapshot",
+      "Low traffic server",
+      "Licensed trial software"
+    ]
+  },
+  {
+    "id": "mc-008",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "In web design, what does CSS stand for?",
+    "correctAnswer": "Cascading Style Sheets",
+    "incorrectAnswers": [
+      "Computer Style Sheets",
+      "Creative Style System",
+      "Colourful Style Sheets"
+    ]
+  },
+  {
+    "id": "mc-009",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "What does SSD stand for?",
+    "correctAnswer": "Solid-state drive",
+    "incorrectAnswers": [
+      "Solution source disk",
+      "Super speed drive",
+      "Source solution drive"
+    ]
+  },
+  {
+    "id": "mc-010",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "What does CPU stand for?",
+    "correctAnswer": "Central processing unit",
+    "incorrectAnswers": [
+      "Central process unit",
+      "Computer personal unit",
+      "Central processor utility"
+    ]
+  },
+  {
+    "id": "mc-011",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "How long is an IPv6 address?",
+    "correctAnswer": "128 bits",
+    "incorrectAnswers": [
+      "32 bits",
+      "64 bits",
+      "128 bytes"
+    ]
+  },
+  {
+    "id": "mc-012",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "Who plays Alice in the \"Resident Evil\" films?",
+    "correctAnswer": "Milla Jovovich",
+    "incorrectAnswers": [
+      "Michelle Rodriguez",
+      "Ali Larter",
+      "Sienna Guillory"
+    ]
+  },
+  {
+    "id": "mc-013",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "Which of these actors does NOT appear in \"Saving Private Ryan\" (1998)?",
+    "correctAnswer": "Ralph Fiennes",
+    "incorrectAnswers": [
+      "Tom Hanks",
+      "Vin Diesel",
+      "Matt Damon"
+    ]
+  },
+  {
+    "id": "mc-014",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "Which of these films is NOT set in Los Angeles?",
+    "correctAnswer": "RoboCop",
+    "incorrectAnswers": [
+      "Blade Runner",
+      "The Terminator",
+      "Predator 2"
+    ]
+  },
+  {
+    "id": "mc-015",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "In \"Jurassic World\", what is the name of the genetically engineered hybrid dinosaur?",
+    "correctAnswer": "Indominus rex",
+    "incorrectAnswers": [
+      "Mosasaurus",
+      "Pteranodon",
+      "Tyrannosaurus rex"
+    ]
+  },
+  {
+    "id": "mc-016",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "Who plays Jack Burton in \"Big Trouble in Little China\"?",
+    "correctAnswer": "Kurt Russell",
+    "incorrectAnswers": [
+      "Patrick Swayze",
+      "John Cusack",
+      "Harrison Ford"
+    ]
+  },
+  {
+    "id": "mc-017",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "Which film contains the line \"Nobody puts Baby in a corner\"?",
+    "correctAnswer": "Dirty Dancing",
+    "incorrectAnswers": [
+      "Three Men and a Baby",
+      "Ferris Bueller's Day Off",
+      "Pretty in Pink"
+    ]
+  },
+  {
+    "id": "mc-018",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "Which of these films was NOT released in 1996?",
+    "correctAnswer": "Gladiator",
+    "incorrectAnswers": [
+      "Independence Day",
+      "The Rock",
+      "Mission: Impossible"
+    ]
+  },
+  {
+    "id": "mc-019",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "If you are travelling at 80 mph, how long will it take you to drive 80 miles?",
+    "correctAnswer": "60 minutes",
+    "incorrectAnswers": [
+      "90 minutes",
+      "30 minutes",
+      "50 minutes"
+    ]
+  },
+  {
+    "id": "mc-020",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Which restaurant chain's mascot is a clown?",
+    "correctAnswer": "McDonald's",
+    "incorrectAnswers": [
+      "Whataburger",
+      "Burger King",
+      "Sonic"
+    ]
+  },
+  {
+    "id": "mc-021",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "What is the Spanish word for \"donkey\"?",
+    "correctAnswer": "Burro",
+    "incorrectAnswers": [
+      "Caballo",
+      "Toro",
+      "Perro"
+    ]
+  },
+  {
+    "id": "mc-022",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "The word \"dozen\" usually refers to a group of how many objects?",
+    "correctAnswer": "12",
+    "incorrectAnswers": [
+      "6",
+      "20",
+      "10"
+    ]
+  },
+  {
+    "id": "mc-023",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "When someone is cowardly, they are said to have a belly of what colour?",
+    "correctAnswer": "Yellow",
+    "incorrectAnswers": [
+      "Green",
+      "Red",
+      "Blue"
+    ]
+  },
+  {
+    "id": "mc-024",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Which of the following is the IATA code for Manchester Airport?",
+    "correctAnswer": "MAN",
+    "incorrectAnswers": [
+      "EGLL",
+      "LHR",
+      "EGCC"
+    ]
+  },
+  {
+    "id": "mc-025",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "When someone is envious, they are said to be what colour?",
+    "correctAnswer": "Green",
+    "incorrectAnswers": [
+      "Red",
+      "Blue",
+      "Yellow"
+    ]
+  },
+  {
+    "id": "mc-026",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Antibiotics are generally taken to fight what?",
+    "correctAnswer": "Bacterial infections",
+    "incorrectAnswers": [
+      "Viruses",
+      "Migraines",
+      "Muscular pains"
+    ]
+  },
+  {
+    "id": "mc-027",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Which sign of the zodiac is represented by a crab?",
+    "correctAnswer": "Cancer",
+    "incorrectAnswers": [
+      "Libra",
+      "Virgo",
+      "Sagittarius"
+    ]
+  },
+  {
+    "id": "mc-028",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "What is H2O?",
+    "correctAnswer": "Water",
+    "incorrectAnswers": [
+      "Oxygen",
+      "Hydrogen",
+      "Salt"
+    ]
+  },
+  {
+    "id": "mc-029",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "What are Panama hats made of?",
+    "correctAnswer": "Straw",
+    "incorrectAnswers": [
+      "Silk",
+      "Hemp",
+      "Flax"
+    ]
+  },
+  {
+    "id": "mc-030",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "What does a funambulist walk on?",
+    "correctAnswer": "A tightrope",
+    "incorrectAnswers": [
+      "Broken glass",
+      "Hot coals",
+      "Stilts"
+    ]
+  },
+  {
+    "id": "mc-031",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "The New York Times slogan is \"All the News That's Fit to...\"",
+    "correctAnswer": "Print",
+    "incorrectAnswers": [
+      "Digest",
+      "Look",
+      "Read"
+    ]
+  },
+  {
+    "id": "mc-032",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "What is the French word for \"hat\"?",
+    "correctAnswer": "Chapeau",
+    "incorrectAnswers": [
+      "Bonnet",
+      "Écharpe",
+      "Casque"
+    ]
+  },
+  {
+    "id": "mc-033",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Which of these is NOT one of the colours of the rainbow?",
+    "correctAnswer": "Pink",
+    "incorrectAnswers": [
+      "Blue",
+      "Violet",
+      "Orange"
+    ]
+  },
+  {
+    "id": "mc-034",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "What is the shortest month of the year?",
+    "correctAnswer": "February",
+    "incorrectAnswers": [
+      "December",
+      "April",
+      "September"
+    ]
+  },
+  {
+    "id": "mc-035",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Foie gras is typically made from which part of a duck or goose?",
+    "correctAnswer": "Liver",
+    "incorrectAnswers": [
+      "Heart",
+      "Stomach",
+      "Intestines"
+    ]
+  },
+  {
+    "id": "mc-036",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Who played General Aladeen in the film \"The Dictator\"?",
+    "correctAnswer": "Sacha Baron Cohen",
+    "incorrectAnswers": [
+      "Johnny Depp",
+      "James Franco",
+      "Leonardo DiCaprio"
+    ]
+  },
+  {
+    "id": "mc-037",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Which country does Austria NOT border?",
+    "correctAnswer": "France",
+    "incorrectAnswers": [
+      "Slovenia",
+      "Switzerland",
+      "Slovakia"
+    ]
+  },
+  {
+    "id": "mc-038",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Which of the following Japanese islands is the biggest?",
+    "correctAnswer": "Honshu",
+    "incorrectAnswers": [
+      "Hokkaido",
+      "Shikoku",
+      "Kyushu"
+    ]
+  },
+  {
+    "id": "mc-039",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "In which modern-day country was the ancient city of Pompeii?",
+    "correctAnswer": "Italy",
+    "incorrectAnswers": [
+      "Greece",
+      "Turkey",
+      "Egypt"
+    ]
+  },
+  {
+    "id": "mc-040",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Which city is the capital of the United States?",
+    "correctAnswer": "Washington, D.C.",
+    "incorrectAnswers": [
+      "Seattle",
+      "Albany",
+      "Los Angeles"
+    ]
+  },
+  {
+    "id": "mc-041",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "With how many countries does the United States share a land border?",
+    "correctAnswer": "2",
+    "incorrectAnswers": [
+      "1",
+      "3",
+      "4"
+    ]
+  },
+  {
+    "id": "mc-042",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "What is the smallest country in the world by area?",
+    "correctAnswer": "Vatican City",
+    "incorrectAnswers": [
+      "Maldives",
+      "Monaco",
+      "Malta"
+    ]
+  },
+  {
+    "id": "mc-043",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Which of the following languages does NOT use the Latin alphabet?",
+    "correctAnswer": "Georgian",
+    "incorrectAnswers": [
+      "Turkish",
+      "Swahili",
+      "Vietnamese"
+    ]
+  },
+  {
+    "id": "mc-044",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Which Polish city is known in German as Danzig?",
+    "correctAnswer": "Gdańsk",
+    "incorrectAnswers": [
+      "Warsaw",
+      "Zakopane",
+      "Poznań"
+    ]
+  },
+  {
+    "id": "mc-045",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Which European city is known as the \"City of Light\"?",
+    "correctAnswer": "Paris",
+    "incorrectAnswers": [
+      "Rome",
+      "London",
+      "Madrid"
+    ]
+  },
+  {
+    "id": "mc-046",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "The island of Santorini belongs to which country?",
+    "correctAnswer": "Greece",
+    "incorrectAnswers": [
+      "Italy",
+      "Spain",
+      "Turkey"
+    ]
+  },
+  {
+    "id": "mc-047",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "Which of these was a Confederate general in the American Civil War?",
+    "correctAnswer": "Robert E. Lee",
+    "incorrectAnswers": [
+      "George A. Custer",
+      "Ulysses S. Grant",
+      "George B. McClellan"
+    ]
+  },
+  {
+    "id": "mc-048",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "The original Roman alphabet lacked three of these letters. Which one did it have?",
+    "correctAnswer": "X",
+    "incorrectAnswers": [
+      "W",
+      "U",
+      "J"
+    ]
+  },
+  {
+    "id": "mc-049",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "The Ottoman Empire was dissolved after losing which war?",
+    "correctAnswer": "World War I",
+    "incorrectAnswers": [
+      "Crimean War",
+      "Serbian Revolution",
+      "Second Balkan War"
+    ]
+  },
+  {
+    "id": "mc-050",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "Which of these countries remained neutral during World War II?",
+    "correctAnswer": "Switzerland",
+    "incorrectAnswers": [
+      "United Kingdom",
+      "France",
+      "Italy"
+    ]
+  },
+  {
+    "id": "mc-051",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "In which war did George Orwell volunteer to fight and nearly die?",
+    "correctAnswer": "Spanish Civil War",
+    "incorrectAnswers": [
+      "World War I",
+      "World War II",
+      "Russian Civil War"
+    ]
+  },
+  {
+    "id": "mc-052",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "How many sides does a pentagon have?",
+    "correctAnswer": "5",
+    "incorrectAnswers": [
+      "9",
+      "6",
+      "4"
+    ]
+  },
+  {
+    "id": "mc-053",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "Which two men are credited with independently inventing calculus?",
+    "correctAnswer": "Newton and Leibniz",
+    "incorrectAnswers": [
+      "Plato and Aristotle",
+      "Euler and Gauss",
+      "Descartes and Fermat"
+    ]
+  },
+  {
+    "id": "mc-054",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "What is the square root of 49?",
+    "correctAnswer": "7",
+    "incorrectAnswers": [
+      "4",
+      "12",
+      "9"
+    ]
+  },
+  {
+    "id": "mc-055",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "How many sides does a trapezium have?",
+    "correctAnswer": "4",
+    "incorrectAnswers": [
+      "3",
+      "5",
+      "6"
+    ]
+  },
+  {
+    "id": "mc-056",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "What shape does the graph of sin(x) make?",
+    "correctAnswer": "A wave",
+    "incorrectAnswers": [
+      "A parabola",
+      "A straight line",
+      "A circle"
+    ]
+  },
+  {
+    "id": "mc-057",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "What is the usual order of operations in arithmetic?",
+    "correctAnswer": "Parentheses, exponents, multiplication/division, addition/subtraction",
+    "incorrectAnswers": [
+      "Addition/subtraction, multiplication/division, exponents, parentheses",
+      "Parentheses, addition/subtraction, exponents, multiplication/division",
+      "Simply left to right, in the order written"
+    ]
+  },
+  {
+    "id": "mc-058",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Music",
+    "question": "Which country does the band Rammstein come from?",
+    "correctAnswer": "Germany",
+    "incorrectAnswers": [
+      "Austria",
+      "Armenia",
+      "Belgium"
+    ]
+  },
+  {
+    "id": "mc-059",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Music",
+    "question": "Which of the following is NOT a studio album by Pink Floyd?",
+    "correctAnswer": "Moving Pictures",
+    "incorrectAnswers": [
+      "The Dark Side of the Moon",
+      "Wish You Were Here",
+      "Animals"
+    ]
+  },
+  {
+    "id": "mc-060",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Music",
+    "question": "Which of these songs was NOT originally released by Elton John?",
+    "correctAnswer": "You'll Be in My Heart",
+    "incorrectAnswers": [
+      "Crocodile Rock",
+      "Candle in the Wind",
+      "I Don't Wanna Go On with You Like That"
+    ]
+  },
+  {
+    "id": "mc-061",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Music",
+    "question": "Whose signature guitar technique is called the \"windmill\"?",
+    "correctAnswer": "Pete Townshend",
+    "incorrectAnswers": [
+      "Jimmy Page",
+      "Eddie Van Halen",
+      "Jimi Hendrix"
+    ]
+  },
+  {
+    "id": "mc-062",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Music",
+    "question": "Which of these instruments is NOT part of the woodwind section?",
+    "correctAnswer": "Trumpet",
+    "incorrectAnswers": [
+      "Clarinet",
+      "Oboe",
+      "Alto saxophone"
+    ]
+  },
+  {
+    "id": "mc-063",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Music",
+    "question": "What kind of instrument is a mandolin?",
+    "correctAnswer": "String",
+    "incorrectAnswers": [
+      "Brass",
+      "Percussion",
+      "Woodwind"
+    ]
+  },
+  {
+    "id": "mc-064",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Music",
+    "question": "The Rush song \"YYZ\" is named after the airport code of which city?",
+    "correctAnswer": "Toronto",
+    "incorrectAnswers": [
+      "Vancouver",
+      "Ottawa",
+      "Calgary"
+    ]
+  },
+  {
+    "id": "mc-065",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "Which Greek god kept the same name when adopted by the Romans?",
+    "correctAnswer": "Apollo",
+    "incorrectAnswers": [
+      "Demeter",
+      "Zeus",
+      "Athena"
+    ]
+  },
+  {
+    "id": "mc-066",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "The Greek god Poseidon ruled over what?",
+    "correctAnswer": "The sea",
+    "incorrectAnswers": [
+      "War",
+      "The sun",
+      "Fire"
+    ]
+  },
+  {
+    "id": "mc-067",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "The ankh is the Egyptian hieroglyph for what?",
+    "correctAnswer": "Life",
+    "incorrectAnswers": [
+      "Love",
+      "Hatred",
+      "Poison"
+    ]
+  },
+  {
+    "id": "mc-068",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "Which mythological creatures have the faces of women and the bodies of birds?",
+    "correctAnswer": "Harpies",
+    "incorrectAnswers": [
+      "Mermaids",
+      "Nymphs",
+      "Centaurs"
+    ]
+  },
+  {
+    "id": "mc-069",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "What does LASER stand for?",
+    "correctAnswer": "Light amplification by stimulated emission of radiation",
+    "incorrectAnswers": [
+      "Light analysis by standard emission of radiation",
+      "Light amplifier by standby energy of radio",
+      "Linear amplification by stimulated energy reflection"
+    ]
+  },
+  {
+    "id": "mc-070",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "What is the SI base unit of time?",
+    "correctAnswer": "Second",
+    "incorrectAnswers": [
+      "Minute",
+      "Hour",
+      "Day"
+    ]
+  },
+  {
+    "id": "mc-071",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "What is the medical term for the belly button?",
+    "correctAnswer": "Umbilicus",
+    "incorrectAnswers": [
+      "Nevus",
+      "Nares",
+      "Paxillus"
+    ]
+  },
+  {
+    "id": "mc-072",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "Which of these bones is the hardest to break?",
+    "correctAnswer": "Femur",
+    "incorrectAnswers": [
+      "Cranium",
+      "Humerus",
+      "Tibia"
+    ]
+  },
+  {
+    "id": "mc-073",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "What is the chemical symbol for mercury?",
+    "correctAnswer": "Hg",
+    "incorrectAnswers": [
+      "Me",
+      "Mc",
+      "Hy"
+    ]
+  },
+  {
+    "id": "mc-074",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "The Etihad Stadium in Manchester is the home ground of which club?",
+    "correctAnswer": "Manchester City",
+    "incorrectAnswers": [
+      "Manchester United",
+      "Arsenal",
+      "Blackpool"
+    ]
+  },
+  {
+    "id": "mc-075",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "What was the final score of the Germany vs. Brazil semi-final at the 2014 FIFA World Cup?",
+    "correctAnswer": "7–1 to Germany",
+    "incorrectAnswers": [
+      "1–0 to Brazil",
+      "4–3 to Germany",
+      "2–2 (Germany won on penalties)"
+    ]
+  },
+  {
+    "id": "mc-076",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Who won the UEFA Champions League in 2017?",
+    "correctAnswer": "Real Madrid",
+    "incorrectAnswers": [
+      "Atlético Madrid",
+      "AS Monaco",
+      "Juventus"
+    ]
+  },
+  {
+    "id": "mc-077",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Which NFL team plays for New England?",
+    "correctAnswer": "Patriots",
+    "incorrectAnswers": [
+      "Chiefs",
+      "Dolphins",
+      "49ers"
+    ]
+  },
+  {
+    "id": "mc-078",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Which of the following is NOT part of a triathlon?",
+    "correctAnswer": "Horse riding",
+    "incorrectAnswers": [
+      "Cycling",
+      "Swimming",
+      "Running"
+    ]
+  },
+  {
+    "id": "mc-079",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Which team did England beat in the 1966 World Cup final?",
+    "correctAnswer": "West Germany",
+    "incorrectAnswers": [
+      "Soviet Union",
+      "Portugal",
+      "Brazil"
+    ]
+  },
+  {
+    "id": "mc-080",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Which team has won the most Stanley Cups in the NHL?",
+    "correctAnswer": "Montreal Canadiens",
+    "incorrectAnswers": [
+      "Chicago Blackhawks",
+      "Toronto Maple Leafs",
+      "Detroit Red Wings"
+    ]
+  },
+  {
+    "id": "mc-081",
+    "type": "MULTIPLE_CHOICE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Who won the 2016 Formula 1 World Drivers' Championship?",
+    "correctAnswer": "Nico Rosberg",
+    "incorrectAnswers": [
+      "Lewis Hamilton",
+      "Max Verstappen",
+      "Kimi Räikkönen"
+    ]
+  }
+]

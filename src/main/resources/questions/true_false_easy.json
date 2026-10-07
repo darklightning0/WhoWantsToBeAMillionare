@@ -1,0 +1,490 @@
+[
+  {
+    "id": "tf-001",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "Elephants are physically unable to jump.",
+    "answer": true
+  },
+  {
+    "id": "tf-002",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "The axolotl, a freshwater amphibian, can regrow its limbs.",
+    "answer": true
+  },
+  {
+    "id": "tf-003",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "A caterpillar has more muscles than a human.",
+    "answer": true
+  },
+  {
+    "id": "tf-004",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "Kangaroos keep food in their pouches next to their young.",
+    "answer": false
+  },
+  {
+    "id": "tf-005",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "Rabbits are rodents.",
+    "answer": false
+  },
+  {
+    "id": "tf-006",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "The web browser Firefox is named after the red panda.",
+    "answer": true
+  },
+  {
+    "id": "tf-007",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "In 2016, the IUCN reclassified giant pandas from endangered to vulnerable.",
+    "answer": true
+  },
+  {
+    "id": "tf-008",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "JavaScript is derived from a later version of Java.",
+    "answer": false
+  },
+  {
+    "id": "tf-009",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "RAM stands for Random Access Memory.",
+    "answer": true
+  },
+  {
+    "id": "tf-010",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "Ada Lovelace is often considered the first computer programmer.",
+    "answer": true
+  },
+  {
+    "id": "tf-011",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "Linux was first created as an alternative to Windows XP.",
+    "answer": false
+  },
+  {
+    "id": "tf-012",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "The programming language Python is based on a modified version of JavaScript.",
+    "answer": false
+  },
+  {
+    "id": "tf-013",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "The Python programming language is named after the British comedy group Monty Python.",
+    "answer": true
+  },
+  {
+    "id": "tf-014",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "In most programming languages, the operator ++ is equivalent to \"+= 1\".",
+    "answer": true
+  },
+  {
+    "id": "tf-015",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "The first IBM PC was released in 1981.",
+    "answer": true
+  },
+  {
+    "id": "tf-016",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "The name of the programming language AWK comes from its developers: Aho, Weinberger and Kernighan.",
+    "answer": true
+  },
+  {
+    "id": "tf-017",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "The Windows ME operating system was released in 2000.",
+    "answer": true
+  },
+  {
+    "id": "tf-018",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "\"Ananas\" is the word used for pineapple in most other languages.",
+    "answer": true
+  },
+  {
+    "id": "tf-019",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "French is an official language in Canada.",
+    "answer": true
+  },
+  {
+    "id": "tf-020",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Gumbo is a stew that originated in Louisiana.",
+    "answer": true
+  },
+  {
+    "id": "tf-021",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "The Sun rises in the north.",
+    "answer": false
+  },
+  {
+    "id": "tf-022",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "The New York Subway is the oldest underground railway in the world.",
+    "answer": false
+  },
+  {
+    "id": "tf-023",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "The \"27 Club\" is a term for famous actors, musicians and artists who died at the age of 27.",
+    "answer": true
+  },
+  {
+    "id": "tf-024",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Slovakia is a member of the European Union.",
+    "answer": true
+  },
+  {
+    "id": "tf-025",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "The colour orange is named after the fruit.",
+    "answer": true
+  },
+  {
+    "id": "tf-026",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "A pasodoble is a type of Italian pasta sauce.",
+    "answer": false
+  },
+  {
+    "id": "tf-027",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Cancer itself is not contagious.",
+    "answer": true
+  },
+  {
+    "id": "tf-028",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "When you cry in space, your tears stick to your face.",
+    "answer": true
+  },
+  {
+    "id": "tf-029",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Ping-pong originated in England.",
+    "answer": true
+  },
+  {
+    "id": "tf-030",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "The mitochondria is the powerhouse of the cell.",
+    "answer": true
+  },
+  {
+    "id": "tf-031",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Hungary is the only country in the world whose name begins with H.",
+    "answer": false
+  },
+  {
+    "id": "tf-032",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "New Haven is the capital of the US state of Connecticut.",
+    "answer": false
+  },
+  {
+    "id": "tf-033",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Alaska is the largest state in the United States.",
+    "answer": true
+  },
+  {
+    "id": "tf-034",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Bosnia and Herzegovina is located in the Baltic region of Europe.",
+    "answer": false
+  },
+  {
+    "id": "tf-035",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Seoul is the capital of North Korea.",
+    "answer": false
+  },
+  {
+    "id": "tf-036",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Portugal's modern territory was once part of the Roman Empire.",
+    "answer": true
+  },
+  {
+    "id": "tf-037",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Despite its name, most of Rhode Island is located on the US mainland.",
+    "answer": true
+  },
+  {
+    "id": "tf-038",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Nova Scotia is on the east coast of Canada.",
+    "answer": true
+  },
+  {
+    "id": "tf-039",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "South Africa has more than one capital city.",
+    "answer": true
+  },
+  {
+    "id": "tf-040",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "A group of islands is called an archipelago.",
+    "answer": true
+  },
+  {
+    "id": "tf-041",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "The Vikings were the first Europeans to reach North America.",
+    "answer": true
+  },
+  {
+    "id": "tf-042",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "Kublai Khan was a grandson of Genghis Khan.",
+    "answer": true
+  },
+  {
+    "id": "tf-043",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "The United States declared its independence from the British Empire on 4 July 1776.",
+    "answer": true
+  },
+  {
+    "id": "tf-044",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "The United States was the first country to launch a human into space.",
+    "answer": false
+  },
+  {
+    "id": "tf-045",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "The Tiananmen Square protests of 1989 were held in Hong Kong.",
+    "answer": false
+  },
+  {
+    "id": "tf-046",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "John F. Kennedy was assassinated in Atlanta, Georgia, on 22 November 1963.",
+    "answer": false
+  },
+  {
+    "id": "tf-047",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "Thomas Crapper was the plumber who invented the flushing toilet.",
+    "answer": false
+  },
+  {
+    "id": "tf-048",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "In Greek mythology, a Gorgon can turn anyone who looks at her to stone.",
+    "answer": true
+  },
+  {
+    "id": "tf-049",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "In Greek mythology, Zeus controls lightning.",
+    "answer": true
+  },
+  {
+    "id": "tf-050",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "In Greek mythology, the god of war is called Mars.",
+    "answer": false
+  },
+  {
+    "id": "tf-051",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "The Earth revolves around the Sun in one year.",
+    "answer": true
+  },
+  {
+    "id": "tf-052",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "The Earth is a perfect sphere.",
+    "answer": false
+  },
+  {
+    "id": "tf-053",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "An atom contains a nucleus.",
+    "answer": true
+  },
+  {
+    "id": "tf-054",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "An astronomical unit is the distance between the Earth and the Moon.",
+    "answer": false
+  },
+  {
+    "id": "tf-055",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "All planets in the Solar System orbit the Sun.",
+    "answer": true
+  },
+  {
+    "id": "tf-056",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "An exothermic reaction is a chemical reaction that releases energy by radiating electricity.",
+    "answer": false
+  },
+  {
+    "id": "tf-057",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "An average human can survive two weeks without water.",
+    "answer": false
+  },
+  {
+    "id": "tf-058",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "Table salt is made entirely of sodium.",
+    "answer": false
+  },
+  {
+    "id": "tf-059",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Shaquille O'Neal made only one three-pointer in his NBA career.",
+    "answer": true
+  },
+  {
+    "id": "tf-060",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Roger Federer is a famous football (soccer) player.",
+    "answer": false
+  },
+  {
+    "id": "tf-061",
+    "type": "TRUE_FALSE",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Peyton Manning retired after winning Super Bowl XLIX.",
+    "answer": false
+  }
+]

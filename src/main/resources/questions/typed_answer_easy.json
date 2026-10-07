@@ -1,0 +1,553 @@
+[
+  {
+    "id": "ta-001",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "What is the scientific name for modern humans?",
+    "acceptedAnswers": [
+      "Homo sapiens",
+      "Homo sapiens sapiens"
+    ]
+  },
+  {
+    "id": "ta-002",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "What is the collective noun for a group of crows?",
+    "acceptedAnswers": [
+      "Murder",
+      "A murder"
+    ]
+  },
+  {
+    "id": "ta-003",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "What is the fastest land animal?",
+    "acceptedAnswers": [
+      "Cheetah",
+      "The cheetah"
+    ]
+  },
+  {
+    "id": "ta-004",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Animals",
+    "question": "How many legs does a butterfly have?",
+    "acceptedAnswers": [
+      "6",
+      "six"
+    ]
+  },
+  {
+    "id": "ta-005",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Computers",
+    "question": "How many bits are in one byte?",
+    "acceptedAnswers": [
+      "8",
+      "eight"
+    ]
+  },
+  {
+    "id": "ta-006",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "In \"Blade Runner\", what are the human-like androids called?",
+    "acceptedAnswers": [
+      "Replicants",
+      "Replicant"
+    ]
+  },
+  {
+    "id": "ta-007",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "What is the name of the orange-and-white ball-shaped droid in \"Star Wars: The Force Awakens\"?",
+    "acceptedAnswers": [
+      "BB-8",
+      "BB8",
+      "BB 8"
+    ]
+  },
+  {
+    "id": "ta-008",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "Which actor starred in \"Top Gun\", \"Jerry Maguire\" and \"Born on the Fourth of July\"?",
+    "acceptedAnswers": [
+      "Tom Cruise",
+      "Cruise"
+    ]
+  },
+  {
+    "id": "ta-009",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Film",
+    "question": "Which actor plays Obi-Wan Kenobi in Star Wars Episodes I–III?",
+    "acceptedAnswers": [
+      "Ewan McGregor",
+      "McGregor"
+    ]
+  },
+  {
+    "id": "ta-010",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Which of the three Apollo 11 astronauts did NOT walk on the Moon?",
+    "acceptedAnswers": [
+      "Michael Collins",
+      "Collins"
+    ]
+  },
+  {
+    "id": "ta-011",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "How many stars are on the flag of the European Union?",
+    "acceptedAnswers": [
+      "12",
+      "twelve"
+    ]
+  },
+  {
+    "id": "ta-012",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "What does the \"F\" in FBI stand for?",
+    "acceptedAnswers": [
+      "Federal"
+    ]
+  },
+  {
+    "id": "ta-013",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "What is the name of the currency used in India and Pakistan?",
+    "acceptedAnswers": [
+      "Rupee",
+      "Rupees"
+    ]
+  },
+  {
+    "id": "ta-014",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Which canal connects the Mediterranean Sea with the Red Sea?",
+    "acceptedAnswers": [
+      "Suez Canal",
+      "Suez"
+    ]
+  },
+  {
+    "id": "ta-015",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Which sign of the zodiac is represented by a pair of scales?",
+    "acceptedAnswers": [
+      "Libra"
+    ]
+  },
+  {
+    "id": "ta-016",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Which wireless technology is named after a tenth-century king of Denmark and Norway?",
+    "acceptedAnswers": [
+      "Bluetooth"
+    ]
+  },
+  {
+    "id": "ta-017",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "In the past, what did a gentleman keep in his fob pocket?",
+    "acceptedAnswers": [
+      "Watch",
+      "A watch",
+      "Pocket watch",
+      "A pocket watch"
+    ]
+  },
+  {
+    "id": "ta-018",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "In the nursery rhyme, what fruit did Little Jack Horner pull out of his Christmas pie?",
+    "acceptedAnswers": [
+      "Plum",
+      "A plum"
+    ]
+  },
+  {
+    "id": "ta-019",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "What do sailors call the front of a boat?",
+    "acceptedAnswers": [
+      "Bow",
+      "The bow"
+    ]
+  },
+  {
+    "id": "ta-020",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Which chemical element has the symbol Kr?",
+    "acceptedAnswers": [
+      "Krypton"
+    ]
+  },
+  {
+    "id": "ta-021",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "In which galaxy is the Earth located?",
+    "acceptedAnswers": [
+      "Milky Way",
+      "The Milky Way",
+      "Milky Way Galaxy"
+    ]
+  },
+  {
+    "id": "ta-022",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "General Knowledge",
+    "question": "Which nuts are used to make marzipan?",
+    "acceptedAnswers": [
+      "Almonds",
+      "Almond"
+    ]
+  },
+  {
+    "id": "ta-023",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Which is the largest and most populous continent in the world?",
+    "acceptedAnswers": [
+      "Asia"
+    ]
+  },
+  {
+    "id": "ta-024",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "Which region of Romania is famous for its association with vampires?",
+    "acceptedAnswers": [
+      "Transylvania"
+    ]
+  },
+  {
+    "id": "ta-025",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "What colour is the circle on the flag of Japan?",
+    "acceptedAnswers": [
+      "Red"
+    ]
+  },
+  {
+    "id": "ta-026",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Geography",
+    "question": "What is the capital of Scotland?",
+    "acceptedAnswers": [
+      "Edinburgh"
+    ]
+  },
+  {
+    "id": "ta-027",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "How many crewed Moon landings did NASA's Apollo program achieve?",
+    "acceptedAnswers": [
+      "6",
+      "six"
+    ]
+  },
+  {
+    "id": "ta-028",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "What was the first sport ever played on the Moon?",
+    "acceptedAnswers": [
+      "Golf"
+    ]
+  },
+  {
+    "id": "ta-029",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "History",
+    "question": "In which year did World War I begin?",
+    "acceptedAnswers": [
+      "1914"
+    ]
+  },
+  {
+    "id": "ta-030",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "How many sides does a heptagon have?",
+    "acceptedAnswers": [
+      "7",
+      "seven"
+    ]
+  },
+  {
+    "id": "ta-031",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "What number does the Roman numeral XL represent?",
+    "acceptedAnswers": [
+      "40",
+      "forty"
+    ]
+  },
+  {
+    "id": "ta-032",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "How many square faces does a cube have?",
+    "acceptedAnswers": [
+      "6",
+      "six"
+    ]
+  },
+  {
+    "id": "ta-033",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "What do you call an angle greater than 90° but less than 180°?",
+    "acceptedAnswers": [
+      "Obtuse",
+      "Obtuse angle",
+      "An obtuse angle"
+    ]
+  },
+  {
+    "id": "ta-034",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "What comes after a million, a billion and a trillion?",
+    "acceptedAnswers": [
+      "Quadrillion",
+      "A quadrillion"
+    ]
+  },
+  {
+    "id": "ta-035",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mathematics",
+    "question": "What is the smallest number of sides a polygon can have?",
+    "acceptedAnswers": [
+      "3",
+      "three"
+    ]
+  },
+  {
+    "id": "ta-036",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Music",
+    "question": "What is the name of Michael Jackson's album that is the best-selling album of all time?",
+    "acceptedAnswers": [
+      "Thriller"
+    ]
+  },
+  {
+    "id": "ta-037",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Music",
+    "question": "What is the real name of the rapper Eminem?",
+    "acceptedAnswers": [
+      "Marshall Mathers",
+      "Marshall Bruce Mathers",
+      "Marshall Bruce Mathers III",
+      "Marshall Mathers III"
+    ]
+  },
+  {
+    "id": "ta-038",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "The sportswear brand Nike is named after the Greek goddess of what?",
+    "acceptedAnswers": [
+      "Victory"
+    ]
+  },
+  {
+    "id": "ta-039",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "The Minotaur is half man and half what?",
+    "acceptedAnswers": [
+      "Bull",
+      "A bull"
+    ]
+  },
+  {
+    "id": "ta-040",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "In Greek mythology, who led the Argonauts in search of the Golden Fleece?",
+    "acceptedAnswers": [
+      "Jason"
+    ]
+  },
+  {
+    "id": "ta-041",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "How many heads does Cerberus, the guard dog of the underworld, have?",
+    "acceptedAnswers": [
+      "3",
+      "three"
+    ]
+  },
+  {
+    "id": "ta-042",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Mythology",
+    "question": "Which part of the Greek hero Achilles' body was his only weak spot?",
+    "acceptedAnswers": [
+      "Heel",
+      "His heel",
+      "The heel"
+    ]
+  },
+  {
+    "id": "ta-043",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "Which gas makes up about 78% of the Earth's atmosphere?",
+    "acceptedAnswers": [
+      "Nitrogen",
+      "N2"
+    ]
+  },
+  {
+    "id": "ta-044",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "What is the SI base unit of mass?",
+    "acceptedAnswers": [
+      "Kilogram",
+      "Kilograms",
+      "kg"
+    ]
+  },
+  {
+    "id": "ta-045",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "What is the first element on the periodic table?",
+    "acceptedAnswers": [
+      "Hydrogen"
+    ]
+  },
+  {
+    "id": "ta-046",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "What is the chemical symbol for helium?",
+    "acceptedAnswers": [
+      "He"
+    ]
+  },
+  {
+    "id": "ta-047",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "Rhinoplasty is surgery on which part of the human body?",
+    "acceptedAnswers": [
+      "Nose"
+    ]
+  },
+  {
+    "id": "ta-048",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Science & Nature",
+    "question": "What name is given to a baby marsupial, such as a kangaroo?",
+    "acceptedAnswers": [
+      "Joey"
+    ]
+  },
+  {
+    "id": "ta-049",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Which country hosted the 2022 FIFA World Cup?",
+    "acceptedAnswers": [
+      "Qatar"
+    ]
+  },
+  {
+    "id": "ta-050",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Which club won the 2015–16 Premier League title as 5000-to-1 outsiders?",
+    "acceptedAnswers": [
+      "Leicester City",
+      "Leicester"
+    ]
+  },
+  {
+    "id": "ta-051",
+    "type": "TYPED_ANSWER",
+    "difficulty": "EASY",
+    "category": "Sports",
+    "question": "Which sport uses the terms \"love\", \"deuce\" and \"volley\"?",
+    "acceptedAnswers": [
+      "Tennis"
+    ]
+  }
+]
