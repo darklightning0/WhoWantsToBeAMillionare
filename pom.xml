@@ -8,7 +8,19 @@
     <artifactId>Who_Wants_to_be_a_Millionaire</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -16,25 +28,15 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.1.0</version>
+                <configuration>
+                    <configLocation>2IP90_checks.xml</configLocation>
+                    <failOnViolation>false</failOnViolation>
+                    <failsOnError>true</failsOnError>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    <violationSeverity>warning</violationSeverity>
+                </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <configuration>
-                <!-- The Checkstyle configuration file (2IP90_checks.xml)
-                     must be located in the root directory of your Maven project
-                     (the same directory as pom.xml). -->
-                <configLocation>2IP90_checks.xml</configLocation>
-                <failOnViolation>false</failOnViolation>
-                <failsOnError>true</failsOnError>
-                <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                <violationSeverity>warning</violationSeverity>
-    </configuration>
-
-    <properties>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
 </project>

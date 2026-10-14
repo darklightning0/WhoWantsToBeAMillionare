@@ -7,7 +7,6 @@ import org.example.wwtbam.ui.components.CircularTimer;
 import org.example.wwtbam.ui.components.GameShowButton;
 import org.example.wwtbam.ui.components.GameShowPanel;
 import org.example.wwtbam.ui.components.JokerPanel;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.HierarchyEvent;
