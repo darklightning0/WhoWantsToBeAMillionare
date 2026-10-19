@@ -9,6 +9,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public final class EndScreen extends JPanel {
+    private final JLabel heading;
+    private final JLabel result;
     private final JLabel score;
 
     public EndScreen(Runnable onPlayAgain) {
@@ -25,8 +27,8 @@ public final class EndScreen extends JPanel {
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         content.setBorder(BorderFactory.createEmptyBorder(35, 65, 40, 65));
 
-        JLabel heading = UITheme.title("Game Over");
-        JLabel result = UITheme.subtitle("Your final score");
+        heading = UITheme.title("Game Over");
+        result = UITheme.subtitle("Your final score");
         score = UITheme.title(finalPrize);
         score.setForeground(UITheme.GOLD);
         StyledButton playAgainButton = UITheme.primaryButton("Play Again");
@@ -42,5 +44,11 @@ public final class EndScreen extends JPanel {
         content.add(playAgainButton);
         background.add(content);
         add(background, BorderLayout.CENTER);
+    }
+
+    public void setResults(String titleText, String subtitleText, String prizeAmount) {
+        heading.setText(titleText);
+        result.setText(subtitleText);
+        score.setText(prizeAmount != null ? prizeAmount : "€0");
     }
 }

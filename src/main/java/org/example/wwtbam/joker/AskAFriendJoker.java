@@ -28,4 +28,14 @@ public class AskAFriendJoker extends RevealAnswerJoker {
     protected String sentence(String correctAnswer) {
         return "I'm sure it's " + correctAnswer + ".";
     }
+
+    @Override
+    public String getAvailableIconPath() {
+        return "/joker_phone.png";
+    }
+
+    @Override
+    public String getUsedIconPath() {
+        return "/joker_phone_used.png";
+    }
 }

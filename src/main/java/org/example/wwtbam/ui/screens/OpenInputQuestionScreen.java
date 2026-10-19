@@ -1,7 +1,8 @@
 package org.example.wwtbam.ui.screens;
 
+import org.example.wwtbam.game.Round;
+import org.example.wwtbam.joker.Joker;
 import org.example.wwtbam.ui.UITheme;
-import org.example.wwtbam.ui.JokerState;
 import org.example.wwtbam.ui.components.BackgroundPanel;
 import org.example.wwtbam.ui.components.CircularTimer;
 import org.example.wwtbam.ui.components.GameShowButton;
@@ -12,26 +13,29 @@ import org.example.wwtbam.ui.components.MoneyBox;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.HierarchyEvent;
+import java.util.List;
+import java.util.function.Consumer;
 
 public final class OpenInputQuestionScreen extends JPanel {
     private static final int QUESTION_TIME_SECONDS = 30;
-    private static final String CORRECT_ANSWER = "Canberra";
 
     private final CircularTimer timerCircle = new CircularTimer(QUESTION_TIME_SECONDS);
     private final Timer timer;
     private final JTextField inputField = new JTextField();
     private final GameShowButton submitButton;
     private final JLabel feedbackLabel;
-    private final Runnable onAnswerSelected;
+    private final JLabel questionLabel;
     private final MoneyBox moneyBox;
+    private final JokerPanel jokerPanel;
 
+    private Round currentRound;
+    private Consumer<String> onAnswerSubmitted;
     private Timer blinkTimer;
     private Timer revealTimer;
     private boolean answerLocked;
     private int secondsRemaining = QUESTION_TIME_SECONDS;
 
-    public OpenInputQuestionScreen(Runnable onAnswerSelected, JokerState jokerState) {
-        this.onAnswerSelected = onAnswerSelected;
+    public OpenInputQuestionScreen() {
         setLayout(new BorderLayout());
         setOpaque(false);
 
@@ -42,13 +46,13 @@ public final class OpenInputQuestionScreen extends JPanel {
 
         JPanel topBar = new JPanel(new BorderLayout(0, 5));
         topBar.setOpaque(false);
-        int currentQuestionNumber = 3;
-        moneyBox = new MoneyBox(InBetweenScreen.PRIZES[currentQuestionNumber - 1]);
+        moneyBox = new MoneyBox(InBetweenScreen.PRIZES[0]);
         topBar.add(moneyBox, BorderLayout.WEST);
 
         JPanel timerSide = new JPanel(new BorderLayout(8, 0));
         timerSide.setOpaque(false);
-        timerSide.add(new JokerPanel(jokerState), BorderLayout.WEST);
+        jokerPanel = new JokerPanel();
+        timerSide.add(jokerPanel, BorderLayout.WEST);
         timerSide.add(timerCircle, BorderLayout.EAST);
         topBar.add(timerSide, BorderLayout.EAST);
         background.add(topBar, BorderLayout.NORTH);
@@ -60,13 +64,10 @@ public final class OpenInputQuestionScreen extends JPanel {
         questionCard.setMinimumSize(new Dimension(0, 106));
         questionCard.setMaximumSize(new Dimension(Integer.MAX_VALUE, 106));
 
-        JLabel question = new JLabel(
-            "<html><div style='text-align:center'>What is the capital city<br>of Australia?</div></html>",
-            SwingConstants.CENTER
-        );
-        question.setForeground(UITheme.TEXT);
-        question.setFont(new Font("SansSerif", Font.BOLD, 22));
-        questionCard.add(question);
+        questionLabel = new JLabel("", SwingConstants.CENTER);
+        questionLabel.setForeground(UITheme.TEXT);
+        questionLabel.setFont(new Font("SansSerif", Font.BOLD, 22));
+        questionCard.add(questionLabel);
 
         JPanel inputPanel = new JPanel(new BorderLayout(12, 0));
         inputPanel.setOpaque(false);
@@ -127,8 +128,62 @@ public final class OpenInputQuestionScreen extends JPanel {
         });
     }
 
+    public void setRound(Round round, int level, List<Joker> jokers, Consumer<String> onAnswerSubmitted) {
+        this.currentRound = round;
+        this.onAnswerSubmitted = onAnswerSubmitted;
+
+        String prize = (level >= 1 && level <= InBetweenScreen.PRIZES.length)
+            ? InBetweenScreen.PRIZES[level - 1]
+            : "€100";
+        moneyBox.setMoney(prize);
+
+        jokerPanel.setJokers(round, jokers, this::handleJokerUsed);
+
+        questionLabel.setText("<html><div style='text-align:center'>" + round.getQuestion().getText() + "</div></html>");
+
+        feedbackLabel.setText(" ");
+        feedbackLabel.setVisible(false);
+
+        resetAndStart();
+    }
+
+    private void handleJokerUsed(Joker joker) {
+        if (currentRound == null) {
+            return;
+        }
+
+        if (joker.getName().contains("Letter") || joker.getName().contains("Digit")) {
+            String hint = currentRound.getHint().orElse("");
+            feedbackLabel.setText("<html><font color='#f5be3f'><b>" + hint + "</b></font></html>");
+            feedbackLabel.setVisible(true);
+            pauseTimerWhile(() -> JOptionPane.showMessageDialog(this, hint, "First Letter / Last Digit", JOptionPane.INFORMATION_MESSAGE));
+        } else if (joker.getName().contains("Host")) {
+            List<String> msgs = currentRound.getJokerMessages();
+            String msg = msgs.isEmpty() ? "The host is silent." : msgs.get(msgs.size() - 1);
+            pauseTimerWhile(() -> JOptionPane.showMessageDialog(this, msg, "Ask the Host", JOptionPane.INFORMATION_MESSAGE));
+        } else if (joker.getName().contains("Friend")) {
+            List<String> msgs = currentRound.getJokerMessages();
+            String msg = msgs.isEmpty() ? "Your friend couldn't be reached." : msgs.get(msgs.size() - 1);
+            pauseTimerWhile(() -> JOptionPane.showMessageDialog(this, msg, "Phone a Friend", JOptionPane.INFORMATION_MESSAGE));
+        }
+    }
+
+    private void pauseTimerWhile(Runnable action) {
+        boolean wasRunning = (timer != null && timer.isRunning());
+        if (wasRunning) {
+            timer.stop();
+        }
+        try {
+            action.run();
+        } finally {
+            if (wasRunning && !answerLocked) {
+                timer.start();
+            }
+        }
+    }
+
     private void handleAnswerSubmission() {
-        if (answerLocked) {
+        if (answerLocked || currentRound == null) {
             return;
         }
         answerLocked = true;
@@ -139,9 +194,9 @@ public final class OpenInputQuestionScreen extends JPanel {
         submitButton.setLabelText("Locked");
 
         String userInput = inputField.getText().trim();
-        boolean isCorrect = CORRECT_ANSWER.equalsIgnoreCase(userInput);
+        boolean isCorrect = currentRound.getQuestion().isCorrect(userInput);
+        String correctAnswer = currentRound.getQuestion().getCorrectAnswerText();
 
-        // Blink yellow slower (500ms interval, 6 ticks = 3000ms = 3 seconds)
         startBlinking(() -> {
             if (isCorrect) {
                 submitButton.setLabelText("Correct!");
@@ -161,13 +216,17 @@ public final class OpenInputQuestionScreen extends JPanel {
                 inputField.setBackground(new Color(55, 15, 20));
                 inputField.setForeground(new Color(255, 170, 170));
 
-                submitButton.setLabelText(CORRECT_ANSWER);
+                submitButton.setLabelText(correctAnswer);
                 submitButton.setButtonState(GameShowButton.State.CORRECT);
-                feedbackLabel.setText("<html><font color='#ef4444'>Incorrect! </font><font color='#22c55e'>Correct answer: </font><font color='#ffffff'><b>" + CORRECT_ANSWER + "</b></font></html>");
+                feedbackLabel.setText("<html><font color='#ef4444'>Incorrect! </font><font color='#22c55e'>Correct answer: </font><font color='#ffffff'><b>" + correctAnswer + "</b></font></html>");
             }
             feedbackLabel.setVisible(true);
 
-            revealTimer = new Timer(2000, event -> onAnswerSelected.run());
+            revealTimer = new Timer(2000, event -> {
+                if (onAnswerSubmitted != null) {
+                    onAnswerSubmitted.accept(userInput);
+                }
+            });
             revealTimer.setRepeats(false);
             revealTimer.start();
         });
@@ -179,7 +238,7 @@ public final class OpenInputQuestionScreen extends JPanel {
         }
 
         final int interval = 500;
-        final int totalTicks = 6; // 6 * 500ms = 3000ms (3 seconds)
+        final int totalTicks = 6;
         final int[] tickCount = {0};
 
         submitButton.setButtonState(GameShowButton.State.BLINK_ON);
@@ -225,7 +284,7 @@ public final class OpenInputQuestionScreen extends JPanel {
     }
 
     private void handleTimeExpired() {
-        if (answerLocked) {
+        if (answerLocked || currentRound == null) {
             return;
         }
         answerLocked = true;
@@ -241,13 +300,18 @@ public final class OpenInputQuestionScreen extends JPanel {
         inputField.setBackground(new Color(55, 15, 20));
         inputField.setForeground(new Color(255, 170, 170));
 
-        submitButton.setLabelText(CORRECT_ANSWER);
+        String correctAnswer = currentRound.getQuestion().getCorrectAnswerText();
+        submitButton.setLabelText(correctAnswer);
         submitButton.setButtonState(GameShowButton.State.CORRECT);
 
-        feedbackLabel.setText("<html><font color='#ef4444'>Time's up! </font><font color='#22c55e'>Correct answer: </font><font color='#ffffff'><b>" + CORRECT_ANSWER + "</b></font></html>");
+        feedbackLabel.setText("<html><font color='#ef4444'>Time's up! </font><font color='#22c55e'>Correct answer: </font><font color='#ffffff'><b>" + correctAnswer + "</b></font></html>");
         feedbackLabel.setVisible(true);
 
-        revealTimer = new Timer(2000, event -> onAnswerSelected.run());
+        revealTimer = new Timer(2000, event -> {
+            if (onAnswerSubmitted != null) {
+                onAnswerSubmitted.accept("");
+            }
+        });
         revealTimer.setRepeats(false);
         revealTimer.start();
     }
@@ -268,9 +332,6 @@ public final class OpenInputQuestionScreen extends JPanel {
         submitButton.setButtonState(GameShowButton.State.NORMAL);
         submitButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
-        feedbackLabel.setText(" ");
-        feedbackLabel.setVisible(false);
-
         secondsRemaining = QUESTION_TIME_SECONDS;
         timerCircle.setSecondsRemaining(secondsRemaining);
         timer.start();
@@ -288,9 +349,5 @@ public final class OpenInputQuestionScreen extends JPanel {
         if (revealTimer != null && revealTimer.isRunning()) {
             revealTimer.stop();
         }
-    }
-
-    public String getInputAnswer() {
-        return inputField.getText().trim();
     }
 }

@@ -31,6 +31,10 @@ public abstract class Joker {
     }
 
     public final boolean isUsed() {
-        return true;
+        return used;
     }
+
+    public abstract String getAvailableIconPath();
+
+    public abstract String getUsedIconPath();
 }

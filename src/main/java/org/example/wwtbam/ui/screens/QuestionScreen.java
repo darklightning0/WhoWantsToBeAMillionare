@@ -1,7 +1,9 @@
 package org.example.wwtbam.ui.screens;
 
+import org.example.wwtbam.game.Round;
+import org.example.wwtbam.joker.Joker;
+import org.example.wwtbam.model.MultipleChoiceQuestion;
 import org.example.wwtbam.ui.UITheme;
-import org.example.wwtbam.ui.JokerState;
 import org.example.wwtbam.ui.components.BackgroundPanel;
 import org.example.wwtbam.ui.components.CircularTimer;
 import org.example.wwtbam.ui.components.GameShowButton;
@@ -14,24 +16,28 @@ import java.awt.*;
 import java.awt.event.HierarchyEvent;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public final class QuestionScreen extends JPanel {
     private static final int QUESTION_TIME_SECONDS = 30;
-    private static final String CORRECT_ANSWER = "Science";
 
     private final CircularTimer timerCircle = new CircularTimer(QUESTION_TIME_SECONDS);
     private final Timer timer;
     private final List<GameShowButton> answerButtons = new ArrayList<>();
-    private final Runnable onAnswerSelected;
+    private final JLabel questionLabel;
     private final MoneyBox moneyBox;
+    private final JokerPanel jokerPanel;
 
+    private Round currentRound;
+    private Consumer<String> onAnswerSubmitted;
     private Timer blinkTimer;
     private Timer revealTimer;
     private boolean answerLocked;
     private int secondsRemaining = QUESTION_TIME_SECONDS;
 
-    public QuestionScreen(Runnable onAnswerSelected, JokerState jokerState) {
-        this.onAnswerSelected = onAnswerSelected;
+    public QuestionScreen() {
         setLayout(new BorderLayout());
         setOpaque(false);
 
@@ -42,13 +48,13 @@ public final class QuestionScreen extends JPanel {
 
         JPanel topBar = new JPanel(new BorderLayout(0, 5));
         topBar.setOpaque(false);
-        int currentQuestionNumber = 1;
-        moneyBox = new MoneyBox(InBetweenScreen.PRIZES[currentQuestionNumber - 1]);
+        moneyBox = new MoneyBox(InBetweenScreen.PRIZES[0]);
         topBar.add(moneyBox, BorderLayout.WEST);
 
         JPanel timerSide = new JPanel(new BorderLayout(8, 0));
         timerSide.setOpaque(false);
-        timerSide.add(new JokerPanel(jokerState), BorderLayout.WEST);
+        jokerPanel = new JokerPanel();
+        timerSide.add(jokerPanel, BorderLayout.WEST);
         timerSide.add(timerCircle, BorderLayout.EAST);
         topBar.add(timerSide, BorderLayout.EAST);
         background.add(topBar, BorderLayout.NORTH);
@@ -60,13 +66,10 @@ public final class QuestionScreen extends JPanel {
         questionCard.setMinimumSize(new Dimension(0, 106));
         questionCard.setMaximumSize(new Dimension(Integer.MAX_VALUE, 106));
 
-        JLabel question = new JLabel(
-            "<html><div style='text-align:center'>Which subject are you ready<br>to master?</div></html>",
-            SwingConstants.CENTER
-        );
-        question.setForeground(UITheme.TEXT);
-        question.setFont(new Font("SansSerif", Font.BOLD, 22));
-        questionCard.add(question);
+        questionLabel = new JLabel("", SwingConstants.CENTER);
+        questionLabel.setForeground(UITheme.TEXT);
+        questionLabel.setFont(new Font("SansSerif", Font.BOLD, 22));
+        questionCard.add(questionLabel);
 
         JPanel answers = new JPanel(new GridLayout(2, 2, 12, 8));
         answers.setOpaque(false);
@@ -75,9 +78,9 @@ public final class QuestionScreen extends JPanel {
         answers.setMinimumSize(new Dimension(0, 132));
         answers.setMaximumSize(new Dimension(Integer.MAX_VALUE, 132));
 
-        for (String answer : new String[]{"Science", "History", "Geography", "Literature"}) {
+        for (int i = 0; i < 4; i++) {
             GameShowButton answerButton = new GameShowButton(
-                GameShowButton.formatWithShape(answer),
+                "",
                 UITheme.PANEL,
                 UITheme.PANEL_LIGHT
             );
@@ -109,8 +112,80 @@ public final class QuestionScreen extends JPanel {
         });
     }
 
+    public void setRound(Round round, int level, List<Joker> jokers, Consumer<String> onAnswerSubmitted) {
+        this.currentRound = round;
+        this.onAnswerSubmitted = onAnswerSubmitted;
+
+        String prize = (level >= 1 && level <= InBetweenScreen.PRIZES.length)
+            ? InBetweenScreen.PRIZES[level - 1]
+            : "€100";
+        moneyBox.setMoney(prize);
+
+        jokerPanel.setJokers(round, jokers, this::handleJokerUsed);
+
+        questionLabel.setText("<html><div style='text-align:center'>" + round.getQuestion().getText() + "</div></html>");
+
+        if (round.getQuestion() instanceof MultipleChoiceQuestion mcq) {
+            List<String> options = mcq.getOptions();
+            for (int i = 0; i < answerButtons.size(); i++) {
+                GameShowButton btn = answerButtons.get(i);
+                if (i < options.size()) {
+                    btn.setLabelText(options.get(i));
+                    btn.setButtonState(GameShowButton.State.NORMAL);
+                    btn.setEnabled(true);
+                    btn.setVisible(true);
+                } else {
+                    btn.setVisible(false);
+                }
+            }
+        }
+
+        resetAndStart();
+    }
+
+    private void handleJokerUsed(Joker joker) {
+        if (currentRound == null) {
+            return;
+        }
+
+        if (joker.getName().contains("50:50")) {
+            List<String> visible = currentRound.getVisibleOptions();
+            for (GameShowButton btn : answerButtons) {
+                if (!visible.contains(btn.getLabelText())) {
+                    btn.setEnabled(false);
+                    btn.setLabelText("");
+                }
+            }
+            JOptionPane.showMessageDialog(this, "50:50 has removed two incorrect answers.", "50:50", JOptionPane.INFORMATION_MESSAGE);
+        } else if (joker.getName().contains("Audience")) {
+            Map<String, Integer> votes = currentRound.getAudienceVotes();
+            String formatted = votes.entrySet().stream()
+                .map(e -> e.getKey() + ": " + e.getValue() + "%")
+                .collect(Collectors.joining("\n"));
+            pauseTimerWhile(() -> JOptionPane.showMessageDialog(this, "Audience Votes:\n" + formatted, "Ask the Audience", JOptionPane.INFORMATION_MESSAGE));
+        } else if (joker.getName().contains("Friend")) {
+            List<String> msgs = currentRound.getJokerMessages();
+            String msg = msgs.isEmpty() ? "Your friend couldn't be reached." : msgs.get(msgs.size() - 1);
+            pauseTimerWhile(() -> JOptionPane.showMessageDialog(this, msg, "Phone a Friend", JOptionPane.INFORMATION_MESSAGE));
+        }
+    }
+
+    private void pauseTimerWhile(Runnable action) {
+        boolean wasRunning = (timer != null && timer.isRunning());
+        if (wasRunning) {
+            timer.stop();
+        }
+        try {
+            action.run();
+        } finally {
+            if (wasRunning && !answerLocked) {
+                timer.start();
+            }
+        }
+    }
+
     private void handleAnswerSelection(GameShowButton clickedButton) {
-        if (answerLocked) {
+        if (answerLocked || currentRound == null) {
             return;
         }
         answerLocked = true;
@@ -120,11 +195,14 @@ public final class QuestionScreen extends JPanel {
             button.setCursor(Cursor.getDefaultCursor());
         }
 
-        // Blink yellow slower (500ms interval, 6 ticks = 3000ms = 3 seconds)
+        String chosenAnswer = clickedButton.getLabelText();
+
         startBlinking(clickedButton, () -> {
+            boolean isCorrect = currentRound.getQuestion().isCorrect(chosenAnswer);
+
             GameShowButton correctButton = null;
             for (GameShowButton button : answerButtons) {
-                if (CORRECT_ANSWER.equalsIgnoreCase(button.getLabelText())) {
+                if (currentRound.getQuestion().isCorrect(button.getLabelText())) {
                     correctButton = button;
                     break;
                 }
@@ -134,11 +212,15 @@ public final class QuestionScreen extends JPanel {
                 correctButton.setButtonState(GameShowButton.State.CORRECT);
             }
 
-            if (clickedButton != correctButton) {
+            if (!isCorrect) {
                 clickedButton.setButtonState(GameShowButton.State.WRONG);
             }
 
-            revealTimer = new Timer(2000, event -> onAnswerSelected.run());
+            revealTimer = new Timer(2000, event -> {
+                if (onAnswerSubmitted != null) {
+                    onAnswerSubmitted.accept(chosenAnswer);
+                }
+            });
             revealTimer.setRepeats(false);
             revealTimer.start();
         });
@@ -150,7 +232,7 @@ public final class QuestionScreen extends JPanel {
         }
 
         final int interval = 500;
-        final int totalTicks = 6; // 6 * 500ms = 3000ms (3 seconds)
+        final int totalTicks = 6;
         final int[] tickCount = {0};
 
         button.setButtonState(GameShowButton.State.BLINK_ON);
@@ -178,7 +260,7 @@ public final class QuestionScreen extends JPanel {
     }
 
     private void handleTimeExpired() {
-        if (answerLocked) {
+        if (answerLocked || currentRound == null) {
             return;
         }
         answerLocked = true;
@@ -186,12 +268,16 @@ public final class QuestionScreen extends JPanel {
 
         for (GameShowButton button : answerButtons) {
             button.setCursor(Cursor.getDefaultCursor());
-            if (CORRECT_ANSWER.equalsIgnoreCase(button.getLabelText())) {
+            if (currentRound.getQuestion().isCorrect(button.getLabelText())) {
                 button.setButtonState(GameShowButton.State.CORRECT);
             }
         }
 
-        revealTimer = new Timer(2000, event -> onAnswerSelected.run());
+        revealTimer = new Timer(2000, event -> {
+            if (onAnswerSubmitted != null) {
+                onAnswerSubmitted.accept("");
+            }
+        });
         revealTimer.setRepeats(false);
         revealTimer.start();
     }

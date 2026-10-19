@@ -11,9 +11,13 @@ public final class JokerPool {
 
     public JokerPool(QuestionSource questionSource, Random random) {
         this.jokers = List.of(
+            new FiftyFiftyJoker(random),
+            new AskTheAudienceJoker(random),
             new AskAFriendJoker(),
-            new AskTheHostJoker());
-        // need to add other jokers here.
+            new SwitchQuestionJoker(questionSource),
+            new FirstLetterLastDigitJoker(),
+            new AskTheHostJoker()
+        );
     }
 
     public List<Joker> jokersFor(Question question) {

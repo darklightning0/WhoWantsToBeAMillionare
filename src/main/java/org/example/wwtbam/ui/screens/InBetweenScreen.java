@@ -1,7 +1,7 @@
 package org.example.wwtbam.ui.screens;
 
+import org.example.wwtbam.joker.Joker;
 import org.example.wwtbam.ui.UITheme;
-import org.example.wwtbam.ui.JokerState;
 import org.example.wwtbam.ui.components.BackgroundPanel;
 import org.example.wwtbam.ui.components.JokerPanel;
 import org.example.wwtbam.ui.components.RoundedPanel;
@@ -17,10 +17,15 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public final class InBetweenScreen extends JPanel {
-    private static final int CURRENT_QUESTION = 3;
     public static final String[] PRIZES = loadPrizesFromJson();
 
-    public InBetweenScreen(Runnable onContinue, Runnable onWithdraw, JokerState jokerState) {
+    private final JLabel label;
+    private final JLabel score;
+    private final JokerPanel jokersPanel;
+    private final JPanel ladderRowsContainer;
+    private int highlightedQuestion = 1;
+
+    public InBetweenScreen(Runnable onContinue, Runnable onWithdraw) {
         setLayout(new BorderLayout());
         setOpaque(false);
 
@@ -35,8 +40,8 @@ public final class InBetweenScreen extends JPanel {
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         content.setBorder(BorderFactory.createEmptyBorder(42, 52, 42, 52));
 
-        JLabel label = UITheme.subtitle("YOU HAVE REACHED A SAFE POINT");
-        JLabel score = UITheme.title(PRIZES.length >= CURRENT_QUESTION ? PRIZES[CURRENT_QUESTION - 1] : "€6,767");
+        label = UITheme.subtitle("CURRENT BANKED PRIZE");
+        score = UITheme.title("€0");
         score.setForeground(UITheme.GOLD);
         JLabel question = UITheme.subtitle("What would you like to do?");
         StyledButton continueButton = UITheme.primaryButton("Continue");
@@ -65,18 +70,11 @@ public final class InBetweenScreen extends JPanel {
         jokersLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         content.add(jokersLabel);
         content.add(Box.createVerticalStrut(8));
-        JokerPanel jokers = new JokerPanel(jokerState);
-        jokers.setAlignmentX(Component.CENTER_ALIGNMENT);
-        content.add(jokers);
 
-        RoundedPanel prizePanel = createPrizePanel();
-        layout.add(content, BorderLayout.CENTER);
-        layout.add(prizePanel, BorderLayout.EAST);
-        background.add(layout);
-        add(background, BorderLayout.CENTER);
-    }
+        jokersPanel = new JokerPanel();
+        jokersPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        content.add(jokersPanel);
 
-    private RoundedPanel createPrizePanel() {
         RoundedPanel prizePanel = new RoundedPanel(new Color(7, 15, 52, 220), 24);
         prizePanel.setLayout(new BoxLayout(prizePanel, BoxLayout.Y_AXIS));
         prizePanel.setBorder(BorderFactory.createEmptyBorder(20, 24, 20, 24));
@@ -89,26 +87,63 @@ public final class InBetweenScreen extends JPanel {
         prizePanel.add(title);
         prizePanel.add(Box.createVerticalStrut(14));
 
+        ladderRowsContainer = new JPanel();
+        ladderRowsContainer.setOpaque(false);
+        ladderRowsContainer.setLayout(new BoxLayout(ladderRowsContainer, BoxLayout.Y_AXIS));
+        prizePanel.add(ladderRowsContainer);
+
+        rebuildPrizeLadder();
+
+        layout.add(content, BorderLayout.CENTER);
+        layout.add(prizePanel, BorderLayout.EAST);
+        background.add(layout);
+        add(background, BorderLayout.CENTER);
+    }
+
+    public void setRoundInfo(int nextQuestionNumber, String bankedMoney, boolean isSafePoint, List<Joker> allJokers) {
+        this.highlightedQuestion = nextQuestionNumber;
+        if (isSafePoint) {
+            label.setText("YOU HAVE REACHED A SAFE POINT");
+        } else {
+            label.setText("CURRENT BANKED PRIZE");
+        }
+        score.setText(bankedMoney != null ? bankedMoney : "€0");
+        rebuildPrizeLadder();
+        jokersPanel.setJokers(null, allJokers, null);
+    }
+
+    private void rebuildPrizeLadder() {
+        ladderRowsContainer.removeAll();
         for (int index = PRIZES.length - 1; index >= 0; index--) {
             int questionNumber = index + 1;
             JPanel row = createPrizeRow(questionNumber, PRIZES[index]);
-            prizePanel.add(row);
+            ladderRowsContainer.add(row);
         }
-
-        return prizePanel;
+        ladderRowsContainer.revalidate();
+        ladderRowsContainer.repaint();
     }
 
     private JPanel createPrizeRow(int questionNumber, String amount) {
         JPanel row = new JPanel(new GridBagLayout());
-        row.setOpaque(questionNumber == CURRENT_QUESTION);
-        row.setBackground(new Color(213, 139, 22));
+        boolean isCurrent = (questionNumber == highlightedQuestion);
+        row.setOpaque(isCurrent);
+        if (isCurrent) {
+            row.setBackground(new Color(213, 139, 22));
+        }
         row.setBorder(BorderFactory.createEmptyBorder(1, 8, 1, 8));
         row.setMaximumSize(new Dimension(Integer.MAX_VALUE, 28));
         row.setPreferredSize(new Dimension(240, 28));
 
-        Color textColor = questionNumber == CURRENT_QUESTION
-            ? Color.WHITE
-            : (questionNumber % 5 == 0 ? UITheme.GOLD : UITheme.TEXT);
+        Color textColor;
+        if (isCurrent) {
+            textColor = Color.WHITE;
+        } else if (questionNumber % 5 == 0) {
+            textColor = UITheme.GOLD;
+        } else if (questionNumber < highlightedQuestion) {
+            textColor = new Color(130, 210, 150); // Completed question in soft green
+        } else {
+            textColor = UITheme.TEXT;
+        }
 
         JLabel number = new JLabel(String.valueOf(questionNumber));
         number.setForeground(textColor);
