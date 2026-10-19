@@ -6,14 +6,26 @@ import javax.swing.*;
 import java.awt.*;
 
 public final class GameShowButton extends JButton {
+    public enum State {
+        NORMAL,
+        BLINK_ON,
+        BLINK_OFF,
+        CORRECT,
+        WRONG
+    }
+
     private final Color fill;
     private final Color hoverFill;
+    private State state = State.NORMAL;
+    private String labelText = "";
     private boolean hovered;
 
     public GameShowButton(String text, Color fill, Color hoverFill) {
-        super(text);
+        super();
         this.fill = fill;
         this.hoverFill = hoverFill;
+        this.labelText = extractLabelText(text);
+
         setForeground(Color.WHITE);
         setFont(new Font("SansSerif", Font.BOLD, 18));
         setFocusPainted(false);
@@ -24,11 +36,15 @@ public final class GameShowButton extends JButton {
         setBorder(BorderFactory.createEmptyBorder(10, 36, 10, 36));
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
+        updateText();
+
         addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseEntered(java.awt.event.MouseEvent event) {
-                hovered = true;
-                repaint();
+                if (state == State.NORMAL) {
+                    hovered = true;
+                    repaint();
+                }
             }
 
             @Override
@@ -39,9 +55,71 @@ public final class GameShowButton extends JButton {
         });
     }
 
+    public static String extractLabelText(String text) {
+        if (text == null) {
+            return "";
+        }
+        if (text.contains("<") && text.contains(">")) {
+            String stripped = text.replaceAll("<[^>]*>", "");
+            stripped = stripped.replace("&nbsp;", " ");
+            stripped = stripped.replace("◆", "").trim();
+            return stripped;
+        }
+        return text.trim();
+    }
+
     public static String formatWithShape(String text) {
         String goldHex = String.format("#%02x%02x%02x", UITheme.GOLD.getRed(), UITheme.GOLD.getGreen(), UITheme.GOLD.getBlue());
         return "<html><font color='" + goldHex + "'>◆</font>&nbsp;&nbsp;" + text + "</html>";
+    }
+
+    public void setButtonState(State state) {
+        this.state = state;
+        if (state != State.NORMAL) {
+            hovered = false;
+        }
+        updateText();
+    }
+
+    public State getButtonState() {
+        return state;
+    }
+
+    public String getLabelText() {
+        return labelText;
+    }
+
+    public void setLabelText(String labelText) {
+        this.labelText = extractLabelText(labelText);
+        updateText();
+    }
+
+    private void updateText() {
+        if (labelText == null) {
+            setText("");
+            return;
+        }
+        String diamondHex;
+        String textHex;
+        switch (state) {
+            case BLINK_ON:
+                diamondHex = "#070c2a";
+                textHex = "#070c2a";
+                break;
+            case CORRECT:
+            case WRONG:
+                diamondHex = "#ffffff";
+                textHex = "#ffffff";
+                break;
+            case NORMAL:
+            case BLINK_OFF:
+            default:
+                diamondHex = String.format("#%02x%02x%02x", UITheme.GOLD.getRed(), UITheme.GOLD.getGreen(), UITheme.GOLD.getBlue());
+                textHex = "#ffffff";
+                break;
+        }
+        setText("<html><font color='" + diamondHex + "'>◆</font>&nbsp;&nbsp;<font color='" + textHex + "'>" + labelText + "</font></html>");
+        repaint();
     }
 
     @Override
@@ -57,9 +135,37 @@ public final class GameShowButton extends JButton {
 
         Graphics2D copy = (Graphics2D) graphics.create();
         copy.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        copy.setColor(hovered ? hoverFill : fill);
+
+        Color currentFill;
+        Color currentBorder;
+
+        switch (state) {
+            case BLINK_ON:
+                currentFill = UITheme.YELLOW;
+                currentBorder = Color.WHITE;
+                break;
+            case BLINK_OFF:
+                currentFill = fill;
+                currentBorder = UITheme.GOLD;
+                break;
+            case CORRECT:
+                currentFill = UITheme.GREEN;
+                currentBorder = Color.WHITE;
+                break;
+            case WRONG:
+                currentFill = UITheme.RED;
+                currentBorder = Color.WHITE;
+                break;
+            case NORMAL:
+            default:
+                currentFill = hovered ? hoverFill : fill;
+                currentBorder = UITheme.GOLD;
+                break;
+        }
+
+        copy.setColor(currentFill);
         copy.fillPolygon(shape);
-        copy.setColor(UITheme.GOLD);
+        copy.setColor(currentBorder);
         copy.setStroke(new BasicStroke(2f));
         copy.drawPolygon(shape);
         copy.dispose();

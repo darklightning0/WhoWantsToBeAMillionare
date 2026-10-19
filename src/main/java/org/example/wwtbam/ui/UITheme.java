@@ -13,6 +13,8 @@ public final class UITheme {
     public static final Color BLUE_HOVER = new Color(50, 200, 200);
     public static final Color GOLD = new Color(245, 190, 63);
     public static final Color RED = new Color(220, 10, 10);
+    public static final Color GREEN = new Color(30, 175, 65);
+    public static final Color YELLOW = new Color(245, 175, 25);
     public static final Color TEXT = new Color(245, 247, 255);
     public static final Color MUTED_TEXT = new Color(185, 198, 226);
 

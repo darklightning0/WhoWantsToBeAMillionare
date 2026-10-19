@@ -9,14 +9,16 @@ import org.example.wwtbam.ui.components.StyledButton;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class InBetweenScreen extends JPanel {
     private static final int CURRENT_QUESTION = 3;
-    public static final String[] PRIZES = {
-        "€100", "€200", "€300", "€500", "€1,000",
-        "€2,000", "€4,000", "€8,000", "€16,000", "€32,000",
-        "€64,000", "€125,000", "€250,000", "€500,000", "€1,000,000"
-    };
+    public static final String[] PRIZES = loadPrizesFromJson();
 
     public InBetweenScreen(Runnable onContinue, Runnable onWithdraw, JokerState jokerState) {
         setLayout(new BorderLayout());
@@ -34,7 +36,7 @@ public final class InBetweenScreen extends JPanel {
         content.setBorder(BorderFactory.createEmptyBorder(42, 52, 42, 52));
 
         JLabel label = UITheme.subtitle("YOU HAVE REACHED A SAFE POINT");
-        JLabel score = UITheme.title("€6,767");
+        JLabel score = UITheme.title(PRIZES.length >= CURRENT_QUESTION ? PRIZES[CURRENT_QUESTION - 1] : "€6,767");
         score.setForeground(UITheme.GOLD);
         JLabel question = UITheme.subtitle("What would you like to do?");
         StyledButton continueButton = UITheme.primaryButton("Continue");
@@ -128,5 +130,31 @@ public final class InBetweenScreen extends JPanel {
         prizeConstraints.anchor = GridBagConstraints.WEST;
         row.add(prize, prizeConstraints);
         return row;
+    }
+
+    private static String[] loadPrizesFromJson() {
+        try (InputStream in = InBetweenScreen.class.getResourceAsStream("/constants.json")) {
+            if (in != null) {
+                String text = new String(in.readAllBytes(), StandardCharsets.UTF_8);
+                Pattern pattern = Pattern.compile("\"([^\"]+)\"");
+                Matcher matcher = pattern.matcher(text);
+                List<String> list = new ArrayList<>();
+                while (matcher.find()) {
+                    String val = matcher.group(1);
+                    if (!val.equals("prizes")) {
+                        list.add(val);
+                    }
+                }
+                if (!list.isEmpty()) {
+                    return list.toArray(new String[0]);
+                }
+            }
+        } catch (Exception ignored) {
+        }
+        return new String[]{
+            "€100", "€200", "€300", "€500", "€1,000",
+            "€2,000", "€4,000", "€8,000", "€16,000", "€32,000",
+            "€64,000", "€125,000", "€250,000", "€500,000", "€1,000,000"
+        };
     }
 }
