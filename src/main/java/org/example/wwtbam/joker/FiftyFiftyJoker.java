@@ -1,11 +1,8 @@
 package org.example.wwtbam.joker;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import org.example.wwtbam.game.Round;
-import org.example.wwtbam.model.MultipleChoiceQuestion;
+import org.example.wwtbam.model.ChoiceQuestion;
 import org.example.wwtbam.model.Question;
 
 public class FiftyFiftyJoker extends Joker {
@@ -23,38 +20,20 @@ public class FiftyFiftyJoker extends Joker {
 
     @Override
     public String getDescription() {
-        return "Removes two incorrect options.";
+        return "Removes two wrong answers.";
     }
 
     @Override
     public boolean canBeUsedOn(Question question) {
-        return question instanceof MultipleChoiceQuestion;
+        return question instanceof ChoiceQuestion choice && choice.getOptions().size() > 2;
     }
 
     @Override
     protected void applyTo(Round round) {
-        if (round.getQuestion() instanceof MultipleChoiceQuestion mcq) {
-            String correct = mcq.getCorrectOption();
-            List<String> incorrect = new ArrayList<>();
-            for (String opt : mcq.getOptions()) {
-                if (!opt.equals(correct)) {
-                    incorrect.add(opt);
-                }
-            }
-            Collections.shuffle(incorrect, random);
-            List<String> toHide = incorrect.subList(0, Math.min(2, incorrect.size()));
-            round.HideOptions(toHide);
-            round.addJokerMessage("50:50 removed two incorrect answers.");
-        }
-    }
-
-    @Override
-    public String getAvailableIconPath() {
-        return "/joker_5050.png";
-    }
-
-    @Override
-    public String getUsedIconPath() {
-        return "/joker_5050_used.png";
+        ChoiceQuestion question = (ChoiceQuestion) round.getQuestion();
+        List<String> wrongOptions = new ArrayList<>(round.getVisibleOptions());
+        wrongOptions.remove(question.getCorrectOption());
+        Collections.shuffle(wrongOptions, random);
+        round.hideOptions(wrongOptions.subList(1, wrongOptions.size()));
     }
 }

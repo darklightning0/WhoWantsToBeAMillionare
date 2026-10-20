@@ -1,15 +1,14 @@
 package org.example.wwtbam.joker;
 
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.stream.Collectors;
+import java.util.*;
 import org.example.wwtbam.game.Round;
 import org.example.wwtbam.model.ChoiceQuestion;
 import org.example.wwtbam.model.Question;
 
 public class AskTheAudienceJoker extends Joker {
+
+    private static final int AUDIENCE_SIZE = 100;
+    private static final int CORRECT_VOTES = 70;
 
     private final Random random;
 
@@ -24,7 +23,7 @@ public class AskTheAudienceJoker extends Joker {
 
     @Override
     public String getDescription() {
-        return "Polls the audience for the most likely answer.";
+        return "See how 100 people in the audience would answer.";
     }
 
     @Override
@@ -34,45 +33,21 @@ public class AskTheAudienceJoker extends Joker {
 
     @Override
     protected void applyTo(Round round) {
-        if (round.getQuestion() instanceof ChoiceQuestion choiceQuestion) {
-            List<String> options = choiceQuestion.getOptions();
-            String correct = choiceQuestion.getCorrectOption();
+        ChoiceQuestion question = (ChoiceQuestion) round.getQuestion();
+        String correct = question.getCorrectOption();
 
-            Map<String, Integer> votes = new LinkedHashMap<>();
-            int correctPct = 55 + random.nextInt(26);
-            int remaining = 100 - correctPct;
-
-            List<String> otherOptions = options.stream()
-                .filter(opt -> !opt.equals(correct))
-                .toList();
-
-            for (int i = 0; i < otherOptions.size(); i++) {
-                if (i == otherOptions.size() - 1) {
-                    votes.put(otherOptions.get(i), remaining);
-                } else {
-                    int share = remaining > 0 ? random.nextInt(remaining) : 0;
-                    votes.put(otherOptions.get(i), share);
-                    remaining -= share;
-                }
-            }
-            votes.put(correct, correctPct);
-
-            round.setAudienceVotes(votes);
-
-            String formattedVotes = votes.entrySet().stream()
-                .map(e -> e.getKey() + ": " + e.getValue() + "%")
-                .collect(Collectors.joining(", "));
-            round.addJokerMessage("Audience Poll Results: " + formattedVotes);
+        Map<String, Integer> votes = new LinkedHashMap<>();
+        for (String option : round.getVisibleOptions()) {
+            votes.put(option, 0);
         }
-    }
+        votes.put(correct, CORRECT_VOTES);
 
-    @Override
-    public String getAvailableIconPath() {
-        return "/joker_audience.png";
-    }
-
-    @Override
-    public String getUsedIconPath() {
-        return "/joker_audience_used.png";
+        List<String> wrongOptions = new ArrayList<>(votes.keySet());
+        wrongOptions.remove(correct);
+        for (int i = 0; i < AUDIENCE_SIZE - CORRECT_VOTES; i++) {
+            String vote = wrongOptions.get(random.nextInt(wrongOptions.size()));
+            votes.merge(vote, 1, Integer::sum);
+        }
+        round.setAudienceVotes(votes);
     }
 }

@@ -1,6 +1,6 @@
 package org.example.wwtbam.data;
 
-import java.util.Random;
+import java.util.*;
 import org.example.wwtbam.model.MultipleChoiceQuestion;
 import org.example.wwtbam.model.Question;
 import org.example.wwtbam.model.TrueFalseQuestion;

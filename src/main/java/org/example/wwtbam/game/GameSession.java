@@ -1,8 +1,6 @@
 package org.example.wwtbam.game;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import org.example.wwtbam.data.QuestionBank;
 import org.example.wwtbam.joker.JokerPool;
 import org.example.wwtbam.model.Difficulty;

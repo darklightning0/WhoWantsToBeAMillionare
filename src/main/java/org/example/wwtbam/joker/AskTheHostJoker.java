@@ -29,14 +29,4 @@ public class AskTheHostJoker extends RevealAnswerJoker {
     protected String sentence(String correctAnswer) {
         return "Between you and me, the answer is " + correctAnswer + ".";
     }
-
-    @Override
-    public String getAvailableIconPath() {
-        return "/joker_ask_host.png";
-    }
-
-    @Override
-    public String getUsedIconPath() {
-        return "/joker_ask_host_used.png";
-    }
 }

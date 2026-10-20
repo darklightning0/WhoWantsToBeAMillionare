@@ -14,7 +14,7 @@ public abstract class Joker {
 
     protected abstract void applyTo(Round round);
 
-    public boolean isReadyFor(Round round) {
+    protected boolean isReadyFor(Round round) {
         return true;
     }
 
@@ -33,8 +33,4 @@ public abstract class Joker {
     public final boolean isUsed() {
         return used;
     }
-
-    public abstract String getAvailableIconPath();
-
-    public abstract String getUsedIconPath();
 }

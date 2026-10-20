@@ -15,7 +15,7 @@ public final class JokerPool {
             new AskTheAudienceJoker(random),
             new AskAFriendJoker(),
             new SwitchQuestionJoker(questionSource),
-            new FirstLetterLastDigitJoker(),
+            new RevealLetterJoker(),
             new AskTheHostJoker()
         );
     }

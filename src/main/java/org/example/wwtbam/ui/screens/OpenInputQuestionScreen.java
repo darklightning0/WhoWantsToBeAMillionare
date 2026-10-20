@@ -175,7 +175,7 @@ public final class OpenInputQuestionScreen extends JPanel {
 
         if (joker.getName().contains("Letter") || joker.getName().contains("Digit")) {
             String hint = currentRound.getHint().orElse("");
-            jokerFeedbackCard.setFeedback("First Letter / Last Digit", hint);
+            jokerFeedbackCard.setFeedback(joker.getName(), hint);
         } else if (joker.getName().contains("Host")) {
             List<String> msgs = currentRound.getJokerMessages();
             String msg = msgs.isEmpty() ? "The host is silent." : msgs.get(msgs.size() - 1);

@@ -53,7 +53,7 @@ public final class JokerPanel extends JPanel {
             button.setCursor(isAvailable ? Cursor.getPredefinedCursor(Cursor.HAND_CURSOR) : Cursor.getDefaultCursor());
             button.setToolTipText(isUsed ? joker.getName() + " (used)" : joker.getName() + " - " + joker.getDescription());
 
-            String iconPath = isUsed ? joker.getUsedIconPath() : joker.getAvailableIconPath();
+            String iconPath = getIconPath(joker, isUsed);
             URL resource = getClass().getResource(iconPath);
             if (resource != null) {
                 Image image = new ImageIcon(resource).getImage();
@@ -81,5 +81,24 @@ public final class JokerPanel extends JPanel {
 
         revalidate();
         repaint();
+    }
+
+    public static String getIconPath(Joker joker, boolean used) {
+        String name = (joker != null && joker.getName() != null) ? joker.getName().toLowerCase() : "";
+        String suffix = used ? "_used.png" : ".png";
+        if (name.contains("50")) {
+            return "/joker_5050" + suffix;
+        } else if (name.contains("audience")) {
+            return "/joker_audience" + suffix;
+        } else if (name.contains("friend")) {
+            return "/joker_phone" + suffix;
+        } else if (name.contains("switch")) {
+            return "/joker_switch_question" + suffix;
+        } else if (name.contains("letter") || name.contains("digit")) {
+            return "/joker_get_digit" + suffix;
+        } else if (name.contains("host")) {
+            return "/joker_ask_host" + suffix;
+        }
+        return "/joker_phone" + suffix;
     }
 }
