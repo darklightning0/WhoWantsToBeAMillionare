@@ -14,7 +14,7 @@ public abstract class Joker {
 
     protected abstract void applyTo(Round round);
 
-    public boolean isReadyFor(Round round) {
+    protected boolean isReadyFor(Round round) {
         return true;
     }
 

@@ -29,7 +29,7 @@ public class Round {
         return List.of();
     }
 
-    public void HideOptions(Collection<String> options) {
+    public void hideOptions(Collection<String> options) {
         hiddenOptions.addAll((options));
     }
 

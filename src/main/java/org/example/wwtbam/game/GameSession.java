@@ -1,8 +1,6 @@
 package org.example.wwtbam.game;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*
 import org.example.wwtbam.data.QuestionBank;
 import org.example.wwtbam.joker.JokerPool;
 import org.example.wwtbam.model.Difficulty;
@@ -85,9 +83,6 @@ public class GameSession {
     private QuestionType pickType() {
         List<QuestionType> choices = new ArrayList<>(List.of(QuestionType.values()));
         choices.remove(previousType);
-        if (difficultyFor(level) == Difficulty.HARD) {
-            choices.remove(QuestionType.TRUE_FALSE);
-        }
         QuestionType type = choices.get(random.nextInt(choices.size()));
         previousType = type;
         return type;
