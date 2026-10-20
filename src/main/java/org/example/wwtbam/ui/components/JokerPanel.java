@@ -38,9 +38,9 @@ public final class JokerPanel extends JPanel {
 
         for (Joker joker : currentJokers) {
             JButton button = new JButton();
-            button.setPreferredSize(new Dimension(62, 52));
-            button.setMinimumSize(new Dimension(62, 52));
-            button.setMaximumSize(new Dimension(62, 52));
+            button.setPreferredSize(new Dimension(56, 46));
+            button.setMinimumSize(new Dimension(56, 46));
+            button.setMaximumSize(new Dimension(56, 46));
             button.setFocusPainted(false);
             button.setBorderPainted(false);
             button.setContentAreaFilled(false);
@@ -50,14 +50,17 @@ public final class JokerPanel extends JPanel {
             boolean isUsed = joker.isUsed();
 
             button.setEnabled(isAvailable);
+            button.setCursor(isAvailable ? Cursor.getPredefinedCursor(Cursor.HAND_CURSOR) : Cursor.getDefaultCursor());
             button.setToolTipText(isUsed ? joker.getName() + " (used)" : joker.getName() + " - " + joker.getDescription());
 
             String iconPath = isUsed ? joker.getUsedIconPath() : joker.getAvailableIconPath();
             URL resource = getClass().getResource(iconPath);
             if (resource != null) {
                 Image image = new ImageIcon(resource).getImage();
-                Image scaled = image.getScaledInstance(58, 48, Image.SCALE_SMOOTH);
-                button.setIcon(new ImageIcon(scaled));
+                Image scaled = image.getScaledInstance(52, 42, Image.SCALE_SMOOTH);
+                ImageIcon icon = new ImageIcon(scaled);
+                button.setIcon(icon);
+                button.setDisabledIcon(icon);
             } else {
                 button.setText(joker.getName());
             }

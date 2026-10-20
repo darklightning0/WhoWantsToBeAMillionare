@@ -38,11 +38,11 @@ public class FirstLetterLastDigitJoker extends Joker {
 
     @Override
     public String getAvailableIconPath() {
-        return "/joker_get_digit.jpeg";
+        return "/joker_get_digit.png";
     }
 
     @Override
     public String getUsedIconPath() {
-        return "/joker_get_digit_used.jpeg";
+        return "/joker_get_digit_used.png";
     }
 }

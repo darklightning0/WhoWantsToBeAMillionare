@@ -31,7 +31,7 @@ public class SwitchQuestionJoker extends Joker {
     @Override
     protected void applyTo(Round round) {
         Question current = round.getQuestion();
-        Question replacement = questionSource.draw(current.getType(), current.getDifficulty());
+        Question replacement = questionSource.draw(current.getType(), current.getDifficulty(), current.getCategory());
         round.replaceQuestion(replacement);
         round.addJokerMessage("Question has been switched!");
     }

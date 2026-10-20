@@ -45,12 +45,43 @@ public final class QuestionBank implements QuestionSource {
 
     @Override
     public Question draw(QuestionType type, Difficulty difficulty) {
-        Question next = unused.get(type).get(difficulty).poll();
-        if (next == null) {
-            throw new NoSuchElementException("No unused " + type + " " + difficulty
-                + " questions left");
+        return draw(type, difficulty, null);
+    }
+
+    @Override
+    public Question draw(QuestionType type, Difficulty difficulty, String excludeCategory) {
+        Deque<Question> pile = unused.get(type).get(difficulty);
+        if (pile == null || pile.isEmpty()) {
+            throw new NoSuchElementException("No unused " + type + " " + difficulty + " questions left");
         }
-        return next;
+
+        if (excludeCategory != null && !excludeCategory.isBlank()) {
+            for (Iterator<Question> it = pile.iterator(); it.hasNext(); ) {
+                Question candidate = it.next();
+                if (!candidate.getCategory().trim().equalsIgnoreCase(excludeCategory.trim())) {
+                    it.remove();
+                    return candidate;
+                }
+            }
+        }
+
+        return pile.poll();
+    }
+
+    public boolean hasQuestionWithDifferentCategory(QuestionType type, Difficulty difficulty, String excludeCategory) {
+        if (excludeCategory == null || excludeCategory.isBlank()) {
+            return remaining(type, difficulty) > 0;
+        }
+        Deque<Question> pile = unused.get(type).get(difficulty);
+        if (pile == null || pile.isEmpty()) {
+            return false;
+        }
+        for (Question candidate : pile) {
+            if (!candidate.getCategory().trim().equalsIgnoreCase(excludeCategory.trim())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public int remaining(QuestionType type, Difficulty difficulty) {

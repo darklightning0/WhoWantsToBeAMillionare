@@ -14,7 +14,10 @@ public final class StartScreen extends JPanel {
         setOpaque(false);
 
         BackgroundPanel background = new BackgroundPanel();
-        background.setLayout(new GridBagLayout());
+        background.setLayout(new BorderLayout());
+
+        JPanel centerWrapper = new JPanel(new GridBagLayout());
+        centerWrapper.setOpaque(false);
 
         RoundedPanel content = new RoundedPanel(new Color(255, 255, 255, 0), 28);
         content.setBorder(BorderFactory.createEmptyBorder(34, 55, 38, 55));
@@ -32,11 +35,17 @@ public final class StartScreen extends JPanel {
         content.add(title);
         content.add(titleSecondLine);
         content.add(Box.createVerticalStrut(12));
-        content.add(UITheme.subtitle("By Alexander Ivanov and Efe Kapukulak"));
+        content.add(UITheme.subtitle("By Aleksandar Ivanov and Efe Kapukulak"));
         content.add(Box.createVerticalStrut(30));
         content.add(startButton);
 
-        background.add(content);
+        centerWrapper.add(content);
+        background.add(centerWrapper, BorderLayout.CENTER);
+
+        JLabel attribution = UITheme.attributionLabel();
+        attribution.setBorder(BorderFactory.createEmptyBorder(0, 0, 14, 0));
+        background.add(attribution, BorderLayout.SOUTH);
+
         add(background, BorderLayout.CENTER);
     }
 }

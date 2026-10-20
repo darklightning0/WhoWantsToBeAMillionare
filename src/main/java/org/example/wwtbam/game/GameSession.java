@@ -6,6 +6,7 @@ import java.util.Random;
 import org.example.wwtbam.data.QuestionBank;
 import org.example.wwtbam.joker.JokerPool;
 import org.example.wwtbam.model.Difficulty;
+import org.example.wwtbam.model.Question;
 import org.example.wwtbam.model.QuestionType;
 
 public class GameSession {
@@ -17,6 +18,7 @@ public class GameSession {
     private JokerPool jokers;
     private int level;
     private QuestionType previousType;
+    private String previousCategory;
     private Round currentRound;
     private boolean answered;
 
@@ -31,6 +33,7 @@ public class GameSession {
         jokers = new JokerPool(bank, random);
         level = 1;
         previousType = null;
+        previousCategory = null;
         currentRound = null;
         answered = false;
     }
@@ -39,7 +42,12 @@ public class GameSession {
         if (hasWon()) {
             throw new IllegalStateException("The game is already won");
         }
-        currentRound = new Round(bank.draw(pickType(), difficultyFor(level)));
+        Difficulty difficulty = difficultyFor(level);
+        QuestionType type = pickType(difficulty);
+        Question question = bank.draw(type, difficulty, previousCategory);
+        previousType = question.getType();
+        previousCategory = question.getCategory();
+        currentRound = new Round(question);
         answered = false;
         return currentRound;
     }
@@ -49,6 +57,10 @@ public class GameSession {
             throw new IllegalStateException("Call startLevel() before answering");
         }
         answered = true;
+        if (currentRound != null) {
+            previousType = currentRound.getQuestion().getType();
+            previousCategory = currentRound.getQuestion().getCategory();
+        }
         boolean correct = currentRound.getQuestion().isCorrect(answer);
         if (correct) {
             level++;
@@ -72,7 +84,7 @@ public class GameSession {
         return jokers;
     }
 
-    static Difficulty difficultyFor(int level) {
+    public static Difficulty difficultyFor(int level) {
         if (level <= 5) {
             return Difficulty.EASY;
         }
@@ -82,14 +94,37 @@ public class GameSession {
         return Difficulty.HARD;
     }
 
-    private QuestionType pickType() {
+    private QuestionType pickType(Difficulty difficulty) {
         List<QuestionType> choices = new ArrayList<>(List.of(QuestionType.values()));
         choices.remove(previousType);
-        if (difficultyFor(level) == Difficulty.HARD) {
+        if (difficulty == Difficulty.HARD) {
             choices.remove(QuestionType.TRUE_FALSE);
         }
-        QuestionType type = choices.get(random.nextInt(choices.size()));
-        previousType = type;
-        return type;
+        choices.removeIf(t -> bank.remaining(t, difficulty) <= 0);
+
+        if (choices.isEmpty()) {
+            for (QuestionType t : QuestionType.values()) {
+                if (bank.remaining(t, difficulty) > 0) {
+                    choices.add(t);
+                }
+            }
+        }
+        if (choices.isEmpty()) {
+            throw new IllegalStateException("No questions available for difficulty: " + difficulty);
+        }
+
+        if (previousCategory != null && choices.size() > 1) {
+            List<QuestionType> diffCatChoices = new ArrayList<>();
+            for (QuestionType t : choices) {
+                if (bank.hasQuestionWithDifferentCategory(t, difficulty, previousCategory)) {
+                    diffCatChoices.add(t);
+                }
+            }
+            if (!diffCatChoices.isEmpty()) {
+                choices = diffCatChoices;
+            }
+        }
+
+        return choices.get(random.nextInt(choices.size()));
     }
 }

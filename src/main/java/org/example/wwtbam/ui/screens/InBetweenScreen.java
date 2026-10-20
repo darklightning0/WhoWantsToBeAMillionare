@@ -30,15 +30,19 @@ public final class InBetweenScreen extends JPanel {
         setOpaque(false);
 
         BackgroundPanel background = new BackgroundPanel();
-        background.setLayout(new GridBagLayout());
+        background.setLayout(new BorderLayout());
+
+        JPanel centerWrapper = new JPanel(new GridBagLayout());
+        centerWrapper.setOpaque(false);
+
         JPanel layout = new JPanel(new BorderLayout(36, 0));
         layout.setOpaque(false);
-        layout.setBorder(BorderFactory.createEmptyBorder(30, 48, 30, 48));
-        layout.setPreferredSize(new Dimension(900, 585));
+        layout.setBorder(BorderFactory.createEmptyBorder(20, 48, 16, 48));
+        layout.setPreferredSize(new Dimension(900, 580));
 
         RoundedPanel content = new RoundedPanel(UITheme.PANEL, 28);
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
-        content.setBorder(BorderFactory.createEmptyBorder(42, 52, 42, 52));
+        content.setBorder(BorderFactory.createEmptyBorder(36, 48, 36, 48));
 
         label = UITheme.subtitle("CURRENT BANKED PRIZE");
         score = UITheme.title("€0");
@@ -48,7 +52,7 @@ public final class InBetweenScreen extends JPanel {
         continueButton.addActionListener(event -> onContinue.run());
         StyledButton withdrawButton = UITheme.primaryButton("Withdraw");
         withdrawButton.addActionListener(event -> onWithdraw.run());
-        Dimension buttonSize = new Dimension(210, 58);
+        Dimension buttonSize = new Dimension(210, 54);
         continueButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         continueButton.setPreferredSize(buttonSize);
         continueButton.setMaximumSize(buttonSize);
@@ -57,19 +61,19 @@ public final class InBetweenScreen extends JPanel {
         withdrawButton.setMaximumSize(buttonSize);
 
         content.add(label);
-        content.add(Box.createVerticalStrut(18));
+        content.add(Box.createVerticalStrut(14));
         content.add(score);
-        content.add(Box.createVerticalStrut(8));
+        content.add(Box.createVerticalStrut(6));
         content.add(question);
-        content.add(Box.createVerticalStrut(34));
+        content.add(Box.createVerticalStrut(26));
         content.add(continueButton);
-        content.add(Box.createVerticalStrut(18));
+        content.add(Box.createVerticalStrut(14));
         content.add(withdrawButton);
-        content.add(Box.createVerticalStrut(24));
+        content.add(Box.createVerticalStrut(20));
         JLabel jokersLabel = UITheme.subtitle("JOKERS");
         jokersLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         content.add(jokersLabel);
-        content.add(Box.createVerticalStrut(8));
+        content.add(Box.createVerticalStrut(6));
 
         jokersPanel = new JokerPanel();
         jokersPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -77,7 +81,7 @@ public final class InBetweenScreen extends JPanel {
 
         RoundedPanel prizePanel = new RoundedPanel(new Color(7, 15, 52, 220), 24);
         prizePanel.setLayout(new BoxLayout(prizePanel, BoxLayout.Y_AXIS));
-        prizePanel.setBorder(BorderFactory.createEmptyBorder(20, 24, 20, 24));
+        prizePanel.setBorder(BorderFactory.createEmptyBorder(18, 24, 18, 24));
         prizePanel.setPreferredSize(new Dimension(300, 0));
 
         JLabel title = new JLabel("PRIZE LADDER");
@@ -85,7 +89,7 @@ public final class InBetweenScreen extends JPanel {
         title.setFont(new Font("SansSerif", Font.BOLD, 16));
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
         prizePanel.add(title);
-        prizePanel.add(Box.createVerticalStrut(14));
+        prizePanel.add(Box.createVerticalStrut(12));
 
         ladderRowsContainer = new JPanel();
         ladderRowsContainer.setOpaque(false);
@@ -96,7 +100,14 @@ public final class InBetweenScreen extends JPanel {
 
         layout.add(content, BorderLayout.CENTER);
         layout.add(prizePanel, BorderLayout.EAST);
-        background.add(layout);
+
+        centerWrapper.add(layout);
+        background.add(centerWrapper, BorderLayout.CENTER);
+
+        JLabel attribution = UITheme.attributionLabel();
+        attribution.setBorder(BorderFactory.createEmptyBorder(0, 0, 10, 0));
+        background.add(attribution, BorderLayout.SOUTH);
+
         add(background, BorderLayout.CENTER);
     }
 

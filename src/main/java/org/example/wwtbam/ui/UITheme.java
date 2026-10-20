@@ -48,4 +48,37 @@ public final class UITheme {
         button.setFont(new Font("SansSerif", Font.BOLD, 15));
         return button;
     }
+
+    public static JLabel attributionLabel() {
+        JLabel label = new JLabel(
+            "<html>The questions come from the <font color='#8da8d6'><u>Open Trivia Database</u></font> (https://opentdb.com), licensed under <font color='#8da8d6'><u>CC BY-SA 4.0</u></font></html>",
+            SwingConstants.CENTER
+        );
+        label.setForeground(new Color(145, 155, 180));
+        label.setFont(new Font("SansSerif", Font.PLAIN, 11));
+        label.setHorizontalAlignment(SwingConstants.CENTER);
+        label.setAlignmentX(Component.CENTER_ALIGNMENT);
+        label.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent e) {
+                try {
+                    if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                        Desktop.getDesktop().browse(new java.net.URI("https://opentdb.com"));
+                    }
+                } catch (Exception ignored) {
+                }
+            }
+        });
+        return label;
+    }
+
+    public static void formatQuestionText(JLabel label, String questionText) {
+        int fontSize = (questionText.length() > 90) ? 17 : (questionText.length() > 60 ? 19 : 21);
+        label.setFont(new Font("SansSerif", Font.BOLD, fontSize));
+        label.setText("<html><table width='760' cellpadding='0' cellspacing='0'><tr><td align='center'>"
+            + questionText
+            + "</td></tr></table></html>");
+    }
 }
+

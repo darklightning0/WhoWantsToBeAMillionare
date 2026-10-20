@@ -28,6 +28,7 @@ public final class TrueFalseQuestionScreen extends JPanel {
     private final JLabel questionLabel;
     private final MoneyBox moneyBox;
     private final JokerPanel jokerPanel;
+    private final org.example.wwtbam.ui.components.JokerFeedbackCard jokerFeedbackCard = new org.example.wwtbam.ui.components.JokerFeedbackCard();
 
     private Round currentRound;
     private Consumer<String> onAnswerSubmitted;
@@ -42,33 +43,47 @@ public final class TrueFalseQuestionScreen extends JPanel {
 
         BackgroundPanel background = new BackgroundPanel();
         background.setLayout(new BorderLayout(0, 14));
-        background.setBorder(BorderFactory.createEmptyBorder(22, 28, 28, 28));
+        background.setBorder(BorderFactory.createEmptyBorder(22, 28, 20, 28));
         add(background, BorderLayout.CENTER);
 
         JPanel topBar = new JPanel(new BorderLayout(0, 5));
         topBar.setOpaque(false);
-        moneyBox = new MoneyBox(InBetweenScreen.PRIZES[0]);
-        topBar.add(moneyBox, BorderLayout.WEST);
 
+        JPanel topLeft = new JPanel();
+        topLeft.setOpaque(false);
+        topLeft.setLayout(new BoxLayout(topLeft, BoxLayout.Y_AXIS));
+        moneyBox = new MoneyBox(InBetweenScreen.PRIZES[0]);
+        moneyBox.setAlignmentX(Component.LEFT_ALIGNMENT);
+        jokerFeedbackCard.setAlignmentX(Component.LEFT_ALIGNMENT);
+        topLeft.add(moneyBox);
+        topLeft.add(Box.createVerticalStrut(8));
+        topLeft.add(jokerFeedbackCard);
+        topBar.add(topLeft, BorderLayout.WEST);
+
+        JPanel timerWrapper = new JPanel(new FlowLayout(FlowLayout.RIGHT, 0, 0));
+        timerWrapper.setOpaque(false);
         JPanel timerSide = new JPanel(new BorderLayout(8, 0));
         timerSide.setOpaque(false);
         jokerPanel = new JokerPanel();
         timerSide.add(jokerPanel, BorderLayout.WEST);
         timerSide.add(timerCircle, BorderLayout.EAST);
-        topBar.add(timerSide, BorderLayout.EAST);
+        timerWrapper.add(timerSide);
+        topBar.add(timerWrapper, BorderLayout.EAST);
         background.add(topBar, BorderLayout.NORTH);
 
         GameShowPanel questionCard = new GameShowPanel(UITheme.PANEL);
-        questionCard.setLayout(new GridBagLayout());
-        questionCard.setBorder(BorderFactory.createEmptyBorder(18, 55, 18, 55));
+        questionCard.setLayout(new BorderLayout());
+        questionCard.setBorder(BorderFactory.createEmptyBorder(12, 45, 12, 45));
         questionCard.setPreferredSize(new Dimension(0, 106));
         questionCard.setMinimumSize(new Dimension(0, 106));
         questionCard.setMaximumSize(new Dimension(Integer.MAX_VALUE, 106));
 
         questionLabel = new JLabel("", SwingConstants.CENTER);
         questionLabel.setForeground(UITheme.TEXT);
-        questionLabel.setFont(new Font("SansSerif", Font.BOLD, 22));
-        questionCard.add(questionLabel);
+        questionLabel.setFont(new Font("SansSerif", Font.BOLD, 20));
+        questionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        questionLabel.setVerticalAlignment(SwingConstants.CENTER);
+        questionCard.add(questionLabel, BorderLayout.CENTER);
 
         JPanel answers = new JPanel(new GridLayout(1, 2, 12, 0));
         answers.setOpaque(false);
@@ -94,7 +109,12 @@ public final class TrueFalseQuestionScreen extends JPanel {
         questionAndAnswers.setOpaque(false);
         questionAndAnswers.add(questionCard, BorderLayout.NORTH);
         questionAndAnswers.add(answers, BorderLayout.SOUTH);
-        background.add(questionAndAnswers, BorderLayout.SOUTH);
+
+        JPanel bottomContainer = new JPanel(new BorderLayout(0, 8));
+        bottomContainer.setOpaque(false);
+        bottomContainer.add(questionAndAnswers, BorderLayout.CENTER);
+        bottomContainer.add(UITheme.attributionLabel(), BorderLayout.SOUTH);
+        background.add(bottomContainer, BorderLayout.SOUTH);
 
         timer = new Timer(1000, event -> tick());
         timer.setInitialDelay(1000);
@@ -119,9 +139,10 @@ public final class TrueFalseQuestionScreen extends JPanel {
             : "€100";
         moneyBox.setMoney(prize);
 
+        jokerFeedbackCard.clear();
         jokerPanel.setJokers(round, jokers, this::handleJokerUsed);
 
-        questionLabel.setText("<html><div style='text-align:center'>" + round.getQuestion().getText() + "</div></html>");
+        UITheme.formatQuestionText(questionLabel, round.getQuestion().getText());
 
         for (GameShowButton btn : answerButtons) {
             btn.setButtonState(GameShowButton.State.NORMAL);
@@ -137,33 +158,18 @@ public final class TrueFalseQuestionScreen extends JPanel {
         }
 
         if (joker.getName().contains("Switch")) {
-            questionLabel.setText("<html><div style='text-align:center'>" + currentRound.getQuestion().getText() + "</div></html>");
-            pauseTimerWhile(() -> JOptionPane.showMessageDialog(this, "The question has been switched to a new one!", "Switch Question", JOptionPane.INFORMATION_MESSAGE));
+            UITheme.formatQuestionText(questionLabel, currentRound.getQuestion().getText());
+            jokerFeedbackCard.setFeedback("Switch Question", "The question has been switched to a new one!");
         } else if (joker.getName().contains("Audience")) {
             Map<String, Integer> votes = currentRound.getAudienceVotes();
-            String formatted = votes.entrySet().stream()
-                .map(e -> e.getKey() + ": " + e.getValue() + "%")
-                .collect(Collectors.joining("\n"));
-            pauseTimerWhile(() -> JOptionPane.showMessageDialog(this, "Audience Votes:\n" + formatted, "Ask the Audience", JOptionPane.INFORMATION_MESSAGE));
+            jokerFeedbackCard.setAudienceFeedback("Ask the Audience", votes);
         } else if (joker.getName().contains("Friend")) {
             List<String> msgs = currentRound.getJokerMessages();
             String msg = msgs.isEmpty() ? "Your friend couldn't be reached." : msgs.get(msgs.size() - 1);
-            pauseTimerWhile(() -> JOptionPane.showMessageDialog(this, msg, "Phone a Friend", JOptionPane.INFORMATION_MESSAGE));
+            jokerFeedbackCard.setFeedback("Phone a Friend", msg);
         }
-    }
-
-    private void pauseTimerWhile(Runnable action) {
-        boolean wasRunning = (timer != null && timer.isRunning());
-        if (wasRunning) {
-            timer.stop();
-        }
-        try {
-            action.run();
-        } finally {
-            if (wasRunning && !answerLocked) {
-                timer.start();
-            }
-        }
+        revalidate();
+        repaint();
     }
 
     private void handleAnswerSelection(GameShowButton clickedButton) {

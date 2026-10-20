@@ -32,11 +32,11 @@ public class AskTheHostJoker extends RevealAnswerJoker {
 
     @Override
     public String getAvailableIconPath() {
-        return "/joker_ask_host.jpeg";
+        return "/joker_ask_host.png";
     }
 
     @Override
     public String getUsedIconPath() {
-        return "/joker_ask_host_used.jpeg";
+        return "/joker_ask_host_used.png";
     }
 }

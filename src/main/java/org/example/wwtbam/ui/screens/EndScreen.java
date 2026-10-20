@@ -22,7 +22,11 @@ public final class EndScreen extends JPanel {
         setOpaque(false);
 
         BackgroundPanel background = new BackgroundPanel();
-        background.setLayout(new GridBagLayout());
+        background.setLayout(new BorderLayout());
+
+        JPanel centerWrapper = new JPanel(new GridBagLayout());
+        centerWrapper.setOpaque(false);
+
         RoundedPanel content = new RoundedPanel(UITheme.PANEL, 28);
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         content.setBorder(BorderFactory.createEmptyBorder(35, 65, 40, 65));
@@ -42,7 +46,14 @@ public final class EndScreen extends JPanel {
         content.add(score);
         content.add(Box.createVerticalStrut(28));
         content.add(playAgainButton);
-        background.add(content);
+
+        centerWrapper.add(content);
+        background.add(centerWrapper, BorderLayout.CENTER);
+
+        JLabel attribution = UITheme.attributionLabel();
+        attribution.setBorder(BorderFactory.createEmptyBorder(0, 0, 14, 0));
+        background.add(attribution, BorderLayout.SOUTH);
+
         add(background, BorderLayout.CENTER);
     }
 

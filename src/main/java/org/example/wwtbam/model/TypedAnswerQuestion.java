@@ -35,7 +35,7 @@ public final class TypedAnswerQuestion extends Question {
 
     @Override
     public String getCorrectAnswerText() {
-        return acceptedAnswers.getFirst();
+        return acceptedAnswers.get(0);
     }
 
     public List<String> getAcceptedAnswers() {
