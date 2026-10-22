@@ -8,6 +8,7 @@ import java.awt.*;
 public final class UITheme {
     public static final Color NAVY = new Color(7, 12, 42);
     public static final Color PANEL = new Color(13, 27, 78, 232);
+    public static final Color PANEL_SOLID = new Color(13, 27, 78);
     public static final Color PANEL_LIGHT = new Color(30, 56, 125, 238);
     public static final Color BLUE = new Color(32, 119, 190);
     public static final Color BLUE_HOVER = new Color(50, 200, 200);

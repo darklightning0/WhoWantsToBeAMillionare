@@ -17,6 +17,7 @@ public final class GameShowButton extends JButton {
     private final Color fill;
     private final Color hoverFill;
     private State state = State.NORMAL;
+    private String prefix = "";
     private String labelText = "";
     private boolean hovered;
 
@@ -94,31 +95,47 @@ public final class GameShowButton extends JButton {
         updateText();
     }
 
+    public void setPrefix(String prefix) {
+        this.prefix = (prefix != null) ? prefix : "";
+        updateText();
+    }
+
+    public String getPrefix() {
+        return prefix;
+    }
+
     private void updateText() {
-        if (labelText == null) {
+        if (labelText == null || labelText.isEmpty()) {
             setText("");
             return;
         }
         String diamondHex;
+        String prefixHex;
         String textHex;
         switch (state) {
             case BLINK_ON:
                 diamondHex = "#070c2a";
+                prefixHex = "#070c2a";
                 textHex = "#070c2a";
                 break;
             case CORRECT:
             case WRONG:
                 diamondHex = "#ffffff";
+                prefixHex = "#ffffff";
                 textHex = "#ffffff";
                 break;
             case NORMAL:
             case BLINK_OFF:
             default:
                 diamondHex = String.format("#%02x%02x%02x", UITheme.GOLD.getRed(), UITheme.GOLD.getGreen(), UITheme.GOLD.getBlue());
+                prefixHex = diamondHex;
                 textHex = "#ffffff";
                 break;
         }
-        setText("<html><font color='" + diamondHex + "'>◆</font>&nbsp;&nbsp;<font color='" + textHex + "'>" + labelText + "</font></html>");
+        String prefixHtml = (prefix == null || prefix.isEmpty())
+            ? ""
+            : "<font color='" + prefixHex + "'><b>" + prefix + "</b></font>&nbsp;&nbsp;";
+        setText("<html><font color='" + diamondHex + "'>◆</font>&nbsp;&nbsp;" + prefixHtml + "<font color='" + textHex + "'>" + labelText + "</font></html>");
         repaint();
     }
 

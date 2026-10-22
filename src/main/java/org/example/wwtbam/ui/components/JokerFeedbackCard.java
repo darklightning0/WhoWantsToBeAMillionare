@@ -49,16 +49,23 @@ public final class JokerFeedbackCard extends RoundedPanel {
     public void setAudienceFeedback(String title, Map<String, Integer> votes) {
         titleLabel.setText("◆ " + title.toUpperCase());
         StringBuilder sb = new StringBuilder();
-        sb.append("<html><table width='290' cellpadding='1' cellspacing='0' style='color: #f5f7ff; font-family: SansSerif; font-size: 11px;'>");
+        sb.append("<html><table width='290' cellpadding='2' cellspacing='0' style='color: #f5f7ff; font-family: SansSerif; font-size: 11px;'>");
         if (votes != null) {
             for (Map.Entry<String, Integer> entry : votes.entrySet()) {
                 int pct = Math.max(0, Math.min(100, entry.getValue()));
-                int bars = Math.max(1, pct / 10);
+                int bars = Math.max(0, Math.min(10, Math.round(pct / 10.0f)));
                 String barStr = "■".repeat(bars) + "□".repeat(10 - bars);
+                String label = entry.getKey();
+                if (label == null) {
+                    label = "";
+                }
+                if (label.length() > 12) {
+                    label = label.substring(0, 10) + "..";
+                }
                 sb.append("<tr>")
-                  .append("<td style='width: 45px;'><b>").append(escapeHtml(entry.getKey())).append(":</b></td>")
-                  .append("<td style='color: #4db3ff; letter-spacing: -1px;'>").append(barStr).append("</td>")
-                  .append("<td style='color: #f5be3f; text-align: right; width: 42px;'><b>").append(pct).append("%</b></td>")
+                  .append("<td style='white-space: nowrap; padding-right: 8px;'><b>").append(escapeHtml(label)).append(":</b></td>")
+                  .append("<td style='color: #4db3ff; letter-spacing: -1px; font-family: monospace;'>").append(barStr).append("</td>")
+                  .append("<td style='color: #f5be3f; text-align: right; width: 38px;'><b>").append(pct).append("%</b></td>")
                   .append("</tr>");
             }
         }

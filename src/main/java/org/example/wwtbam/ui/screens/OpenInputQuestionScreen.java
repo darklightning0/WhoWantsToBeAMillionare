@@ -21,7 +21,17 @@ public final class OpenInputQuestionScreen extends JPanel {
 
     private final CircularTimer timerCircle = new CircularTimer(QUESTION_TIME_SECONDS);
     private final Timer timer;
-    private final JTextField inputField = new JTextField();
+    private final JTextField inputField = new JTextField() {
+        @Override
+        protected void paintComponent(Graphics g) {
+            Graphics2D g2 = (Graphics2D) g.create();
+            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(getBackground());
+            g2.fillRect(0, 0, getWidth(), getHeight());
+            g2.dispose();
+            super.paintComponent(g);
+        }
+    };
     private final GameShowButton submitButton;
     private final JLabel feedbackLabel;
     private final JLabel questionLabel;
@@ -90,7 +100,8 @@ public final class OpenInputQuestionScreen extends JPanel {
         inputPanel.setMinimumSize(new Dimension(0, 62));
         inputPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 62));
 
-        inputField.setBackground(UITheme.PANEL);
+        inputField.setOpaque(false);
+        inputField.setBackground(UITheme.PANEL_SOLID);
         inputField.setForeground(Color.WHITE);
         inputField.setCaretColor(UITheme.GOLD);
         inputField.setFont(new Font("SansSerif", Font.BOLD, 18));
@@ -274,7 +285,7 @@ public final class OpenInputQuestionScreen extends JPanel {
                         BorderFactory.createLineBorder(UITheme.GOLD, 2),
                         BorderFactory.createEmptyBorder(10, 20, 10, 20)
                     ));
-                    inputField.setBackground(UITheme.PANEL);
+                    inputField.setBackground(UITheme.PANEL_SOLID);
                 }
             }
         });
@@ -328,7 +339,7 @@ public final class OpenInputQuestionScreen extends JPanel {
         answerLocked = false;
         inputField.setText("");
         inputField.setEditable(true);
-        inputField.setBackground(UITheme.PANEL);
+        inputField.setBackground(UITheme.PANEL_SOLID);
         inputField.setForeground(Color.WHITE);
         inputField.setBorder(BorderFactory.createCompoundBorder(
             BorderFactory.createLineBorder(UITheme.GOLD, 2),
