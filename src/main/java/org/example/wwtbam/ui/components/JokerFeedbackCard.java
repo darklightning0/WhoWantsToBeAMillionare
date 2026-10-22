@@ -17,7 +17,7 @@ public final class JokerFeedbackCard extends RoundedPanel {
             BorderFactory.createLineBorder(new Color(245, 190, 63, 190), 2, true),
             BorderFactory.createEmptyBorder(10, 14, 10, 14)
         ));
-        setPreferredSize(new Dimension(340, 120));
+        setPreferredSize(new Dimension(340, 145));
         setMaximumSize(new Dimension(360, 160));
         setMinimumSize(new Dimension(280, 80));
 
@@ -49,7 +49,7 @@ public final class JokerFeedbackCard extends RoundedPanel {
     public void setAudienceFeedback(String title, Map<String, Integer> votes) {
         titleLabel.setText("◆ " + title.toUpperCase());
         StringBuilder sb = new StringBuilder();
-        sb.append("<html><table width='290' cellpadding='2' cellspacing='0' style='color: #f5f7ff; font-family: SansSerif; font-size: 11px;'>");
+        sb.append("<html><table width='290' cellpadding='1' cellspacing='0' style='color: #f5f7ff; font-family: SansSerif; font-size: 11px;'>");
         if (votes != null) {
             for (Map.Entry<String, Integer> entry : votes.entrySet()) {
                 int pct = Math.max(0, Math.min(100, entry.getValue()));
