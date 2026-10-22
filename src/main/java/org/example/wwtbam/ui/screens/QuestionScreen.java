@@ -15,6 +15,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.HierarchyEvent;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
@@ -148,14 +149,17 @@ public final class QuestionScreen extends JPanel {
 
         if (round.getQuestion() instanceof MultipleChoiceQuestion mcq) {
             List<String> options = mcq.getOptions();
+            char[] letters = {'A', 'B', 'C', 'D'};
             for (int i = 0; i < answerButtons.size(); i++) {
                 GameShowButton btn = answerButtons.get(i);
                 if (i < options.size()) {
+                    btn.setPrefix(letters[i] + ":");
                     btn.setLabelText(options.get(i));
                     btn.setButtonState(GameShowButton.State.NORMAL);
                     btn.setEnabled(true);
                     btn.setVisible(true);
                 } else {
+                    btn.setPrefix("");
                     btn.setVisible(false);
                 }
             }
@@ -174,13 +178,26 @@ public final class QuestionScreen extends JPanel {
             for (GameShowButton btn : answerButtons) {
                 if (!visible.contains(btn.getLabelText())) {
                     btn.setEnabled(false);
+                    btn.setPrefix("");
                     btn.setLabelText("");
                 }
             }
             jokerFeedbackCard.setFeedback("50:50 Joker", "Two incorrect options have been eliminated.");
         } else if (joker.getName().contains("Audience")) {
             Map<String, Integer> votes = currentRound.getAudienceVotes();
-            jokerFeedbackCard.setAudienceFeedback("Ask the Audience", votes);
+            Map<String, Integer> letterVotes = new LinkedHashMap<>();
+            if (currentRound.getQuestion() instanceof MultipleChoiceQuestion mcq) {
+                List<String> allOptions = mcq.getOptions();
+                char[] letters = {'A', 'B', 'C', 'D'};
+                for (Map.Entry<String, Integer> entry : votes.entrySet()) {
+                    int idx = allOptions.indexOf(entry.getKey());
+                    String key = (idx >= 0 && idx < letters.length) ? String.valueOf(letters[idx]) : entry.getKey();
+                    letterVotes.put(key, entry.getValue());
+                }
+            } else {
+                letterVotes.putAll(votes);
+            }
+            jokerFeedbackCard.setAudienceFeedback("Ask the Audience", letterVotes);
         } else if (joker.getName().contains("Friend")) {
             List<String> msgs = currentRound.getJokerMessages();
             String msg = msgs.isEmpty() ? "Your friend couldn't be reached." : msgs.get(msgs.size() - 1);

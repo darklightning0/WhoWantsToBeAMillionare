@@ -17,7 +17,7 @@ public final class JokerFeedbackCard extends RoundedPanel {
             BorderFactory.createLineBorder(new Color(245, 190, 63, 190), 2, true),
             BorderFactory.createEmptyBorder(10, 14, 10, 14)
         ));
-        setPreferredSize(new Dimension(340, 120));
+        setPreferredSize(new Dimension(340, 145));
         setMaximumSize(new Dimension(360, 160));
         setMinimumSize(new Dimension(280, 80));
 
@@ -53,12 +53,19 @@ public final class JokerFeedbackCard extends RoundedPanel {
         if (votes != null) {
             for (Map.Entry<String, Integer> entry : votes.entrySet()) {
                 int pct = Math.max(0, Math.min(100, entry.getValue()));
-                int bars = Math.max(1, pct / 10);
+                int bars = Math.max(0, Math.min(10, Math.round(pct / 10.0f)));
                 String barStr = "■".repeat(bars) + "□".repeat(10 - bars);
+                String label = entry.getKey();
+                if (label == null) {
+                    label = "";
+                }
+                if (label.length() > 12) {
+                    label = label.substring(0, 10) + "..";
+                }
                 sb.append("<tr>")
-                  .append("<td style='width: 45px;'><b>").append(escapeHtml(entry.getKey())).append(":</b></td>")
-                  .append("<td style='color: #4db3ff; letter-spacing: -1px;'>").append(barStr).append("</td>")
-                  .append("<td style='color: #f5be3f; text-align: right; width: 42px;'><b>").append(pct).append("%</b></td>")
+                  .append("<td style='white-space: nowrap; padding-right: 8px;'><b>").append(escapeHtml(label)).append(":</b></td>")
+                  .append("<td style='color: #4db3ff; letter-spacing: -1px; font-family: monospace;'>").append(barStr).append("</td>")
+                  .append("<td style='color: #f5be3f; text-align: right; width: 38px;'><b>").append(pct).append("%</b></td>")
                   .append("</tr>");
             }
         }
