@@ -2,9 +2,13 @@
 
 A Java Swing-based desktop trivia quiz game inspired by *Who Wants to Be a Millionaire*.
 
----
+**GitHub repository:** https://github.com/darklightning0/WhoWantsToBeAMillionare
 
-## Prerequisites & Dependencies
+## 1. Unzip the project
+
+Unzip the submitted `.zip` file. The unzipped folder that contains `pom.xml` and `src/` is the project.
+
+## 2. Prerequisites
 
 Ensure you have the following installed:
 - **Java JDK 25** or higher (`java -version`)
@@ -12,45 +16,41 @@ Ensure you have the following installed:
 
 All library dependencies (such as Google Gson) and game assets are bundled and resolved automatically through Maven.
 
----
+## 3. Open the project and load the Gson dependency
 
-## Building the Project
+The game reads its questions from JSON files using the **Gson** library. Gson is declared as a Maven dependency in `pom.xml`, so you don't need to install it yourself:
 
-To compile the project and download required dependencies:
-
-```bash
-mvn clean compile
+```xml
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.14.0</version>
+</dependency>
 ```
 
-To package the application into a JAR:
+1. In IntelliJ IDEA, choose **File > Open** and select the unzipped project folder (the one with `pom.xml`).
+2. IntelliJ downloads Gson automatically; an internet connection is needed the first time. If it doesn't, open the **Maven** tool window and click **Reload All Maven Projects**.
+3. The project uses **JDK 25**. If IntelliJ asks for an SDK, select JDK 25 under **File > Project Structure > Project > SDK**.
 
-```bash
-mvn clean package
-```
 
----
 
 ## Running the Application
 
-### Option 1: Using Maven (Recommended)
-Run the application directly using the Maven exec plugin:
+## 4. Run in IntelliJ IDEA
 
-```bash
-mvn exec:java
-```
+1. Choose **File > Open** and select the unzipped project folder (the one with `pom.xml`).
+2. Gson is downloaded automatically. If it isn't, open the **Maven** tool window and click **Reload All Maven Projects**.
+3. If IntelliJ asks for an SDK, select JDK 25 under **File > Project Structure > Project > SDK**.
+4. Open `src/main/java/org/example/wwtbam/Main.java` and click the green run arrow next to `main`, or right-click the file and choose **Run 'Main.main()'**.
 
-*(Alternatively: `mvn compile exec:java` to compile and launch in one step)*
+## 5. Run in Apache NetBeans
 
-### Option 2: Using the Built JAR / Compiled Classes
-After running `mvn clean package`:
+1. Choose **File > Open Project** and select the unzipped project folder. NetBeans recognises it as a Maven project.
+2. Right-click the project and choose **Clean and Build**. This downloads Gson. If NetBeans shows a warning about missing dependencies, right-click the project and choose **Resolve Project Problems**.
+3. If JDK 25 is not selected, add it under **Tools > Java Platforms**, then choose it under project **Properties > Build > Compile > Java Platform**.
+4. In the **Projects** window, open **Source Packages > org.example.wwtbam**, right-click `Main.java` and choose **Run File** (Shift+F6).
 
-```bash
-java -cp target/Who_Wants_to_be_a_Millionaire-1.0-SNAPSHOT.jar org.example.wwtbam.Main
-```
+## 6. Without an IDE
 
-Or directly after `mvn clean compile`:
-
-```bash
-java -cp target/classes org.example.wwtbam.Main
-```
+Run `mvn compile exec:java` from the project folder (requires Maven and JDK 25).
 
