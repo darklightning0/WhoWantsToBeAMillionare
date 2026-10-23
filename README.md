@@ -41,9 +41,16 @@ mvn exec:java
 
 *(Alternatively: `mvn compile exec:java` to compile and launch in one step)*
 
-### Option 2: Using the Built JAR
-After running `mvn clean package`, launch the JAR with:
+### Option 2: Using the Built JAR / Compiled Classes
+After running `mvn clean package`:
 
 ```bash
 java -cp target/Who_Wants_to_be_a_Millionaire-1.0-SNAPSHOT.jar org.example.wwtbam.Main
 ```
+
+Or directly after `mvn clean compile`:
+
+```bash
+java -cp target/classes org.example.wwtbam.Main
+```
+
