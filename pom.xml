@@ -59,7 +59,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>com.example.Game</mainClass>
+                    <mainClass>org.example.wwtbam.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
